@@ -1,0 +1,301 @@
+id,make,model,year,cylinders,engine_displacement,drive,fuel_type,fuel_cost,fuel_type1,transmission,vehicle_size_class,you_save_spend,annual_petroleum_consumption,fetch_date,fiyat
+3190,Chevrolet,Beretta,1987,6,2.8,Front-Wheel Drive,Regular,2700,Regular Gasoline,Manual 5-spd,Compact Cars,-4000,14.8755,2024-11-13 00:04:23,80664.00
+32231,Mazda,6,2013,6,3.7,Front-Wheel Drive,Regular,2550,Regular Gasoline,Automatic (S6),Midsize Cars,-3250,14.1671,2024-11-13 00:04:23,42867.00
+32746,GMC,Terrain FWD,2013,6,3.6,Front-Wheel Drive,Regular,2700,Regular Gasoline,Automatic 6-spd,Small Sport Utility Vehicle 2WD,-4000,14.8755,2024-11-13 00:04:23,55073.00
+34294,Chrysler,300,2014,6,3.6,Rear-Wheel Drive,Regular,2350,Regular Gasoline,Automatic 8-spd,Large Cars,-2250,12.9352,2024-11-13 00:04:23,52189.00
+37369,Mercedes-Benz,AMG GLS63,2017,8,5.5,4-Wheel Drive,Premium,4800,Premium Gasoline,Automatic 7-spd,Standard Sport Utility Vehicle 4WD,-14500,21.2507,2024-11-12 23:34:21,83150.00
+37890,BMW,320i,2017,4,2,Rear-Wheel Drive,Premium,2500,Premium Gasoline,Manual 6-spd,Compact Cars,-3000,11.0189,2024-11-12 23:34:21,41937.00
+38424,Toyota,Highlander AWD,2017,6,3.5,All-Wheel Drive,Regular,2450,Regular Gasoline,Automatic (S8),Standard Sport Utility Vehicle 4WD,-2750,13.5232,2024-11-12 23:34:21,48586.00
+39072,GMC,Canyon 2WD,2018,4,2.5,Rear-Wheel Drive,Regular,2450,Regular Gasoline,Manual 6-spd,Small Pickup Trucks 2WD,-2750,13.5232,2024-11-12 23:34:21,39777.00
+4179,Toyota,Celica Convertible,1988,4,2,Front-Wheel Drive,Regular,2150,Regular Gasoline,Manual 5-spd,Minicompact Cars,-1250,11.9004,2024-11-12 23:34:21,42522.00
+42410,Porsche,911 Carrera S,2020,6,3,Rear-Wheel Drive,Premium,3350,Premium Gasoline,Manual 7-spd,Minicompact Cars,-7250,14.8755,2024-11-12 23:34:21,70581.00
+44455,Lexus,ES 350 F Sport,2022,6,3.5,Front-Wheel Drive,Regular,2150,Regular Gasoline,Automatic (S8),Midsize Cars,-1250,11.9004,2024-11-12 23:34:21,50009.00
+46525,BMW,M440i xDrive Convertible,2024,6,3,All-Wheel Drive,Premium,2700,Premium Gasoline,Automatic (S8),Subcompact Cars,-4000,11.9004,2024-11-12 23:34:21,80947.00
+46648,Ford,Mustang,2024,8,5,Rear-Wheel Drive,Regular,3000,Regular Gasoline,Automatic (S10),Subcompact Cars,-5500,16.5283,2024-11-12 23:34:21,77914.00
+5252,Nissan,300ZX,1989,6,3,Rear-Wheel Drive,Regular,3000,Regular Gasoline,Automatic 4-spd,Two Seaters,-5500,16.5283,2024-11-12 23:34:21,48335.00
+5256,Evans Automobiles,Series I,1989,8,5.7,Rear-Wheel Drive,Regular,2850,Regular Gasoline,Manual 5-spd,Two Seaters,-4750,15.6584,2024-11-12 23:34:21,72963.00
+686,Mercury,Grand Marquis Wagon,1985,8,5,Rear-Wheel Drive,Regular,3150,Regular Gasoline,Automatic 4-spd,Midsize-Large Station Wagons,-6250,17.5006,2024-11-12 23:34:21,70558.00
+7568,Nissan,Sentra,1991,4,2,Front-Wheel Drive,Regular,2250,Regular Gasoline,Manual 5-spd,Subcompact Cars,-1750,12.3962,2024-11-12 23:34:21,79766.00
+7899,Volkswagen,Jetta,1991,4,1.8,Front-Wheel Drive,Regular,2150,Regular Gasoline,Manual 5-spd,Compact Cars,-1250,11.9004,2024-11-12 23:34:21,59641.00
+8114,Nissan,Truck 2WD,1991,4,2.4,Rear-Wheel Drive,Regular,2700,Regular Gasoline,Automatic 4-spd,Small Pickup Trucks,-4000,14.8755,2024-11-12 23:34:21,67164.00
+37413,Kia,Rio,2017,4,1.6,Front-Wheel Drive,Regular,1800,Regular Gasoline,Automatic (S6),Compact Cars,500,9.917,2024-11-12 23:34:21,48775.00
+37688,Cadillac,Escalade 4WD,2017,8,6.2,4-Wheel Drive,Regular,3150,Regular Gasoline,Automatic 8-spd,Standard Sport Utility Vehicle 4WD,-6250,17.5006,2024-11-12 23:34:21,71895.00
+38340,Nissan,Juke,2017,4,1.6,Front-Wheel Drive,Premium,2300,Premium Gasoline,Automatic (AV-S7),Small Station Wagons,-2000,10.259,2024-11-12 23:34:21,39672.00
+38555,MINI,Cooper S Countryman,2017,4,2,Front-Wheel Drive,Premium,2500,Premium Gasoline,Automatic (S8),Midsize Cars,-3000,11.0189,2024-11-12 23:34:21,78834.00
+39188,Jeep,Grand Cherokee SRT 4WD,2018,8,6.4,All-Wheel Drive,Premium,4500,Premium Gasoline,Automatic 8-spd,Standard Sport Utility Vehicle 4WD,-13000,19.834,2024-11-12 23:34:21,73912.00
+40875,Lexus,GS 350,2019,6,3.5,Rear-Wheel Drive,Premium,2950,Premium Gasoline,Automatic (S8),Midsize Cars,-5250,12.9352,2024-11-12 23:34:21,35491.00
+41863,Chevrolet,Silverado Cab Chassis 4WD,2020,6,4.3,4-Wheel Drive,Regular,3600,Regular Gasoline,Automatic 6-spd,Special Purpose Vehicle 4WD,-8500,19.834,2024-11-12 23:34:21,50742.00
+43071,Land Rover,Range Rover Velar,2021,8,5,All-Wheel Drive,Premium,3950,Premium Gasoline,Automatic (S8),Small Sport Utility Vehicle 4WD,-10250,17.5006,2024-11-12 23:34:21,41108.00
+43537,Mercedes-Benz,AMG E63 S 4matic Plus,2021,8,4,4-Wheel Drive,Premium,3750,Premium Gasoline,Automatic 9-spd,Midsize Cars,-9250,16.5283,2024-11-12 23:34:21,41278.00
+43678,Ford,Mustang Convertible,2021,8,5,Rear-Wheel Drive,Regular,3000,Regular Gasoline,Automatic (S10),Subcompact Cars,-5500,16.5283,2024-11-12 23:34:21,61380.00
+46084,Porsche,911 GT3,2023,6,4,Rear-Wheel Drive,Premium,4200,Premium Gasoline,Manual 6-spd,Two Seaters,-11500,18.5944,2024-11-12 23:34:21,74438.00
+2937,Ferrari,3.2 Mondial/Cabriolet,1987,8,3.2,Rear-Wheel Drive,Regular,4150,Regular Gasoline,Manual 5-spd,Minicompact Cars,-11250,22.8854,2024-11-12 23:34:21,65939.00
+2985,Chevrolet,Chevette CS,1987,4,1.6,Rear-Wheel Drive,Regular,2250,Regular Gasoline,Automatic 3-spd,Subcompact Cars,-1750,12.3962,2024-11-12 23:34:21,36139.00
+30513,GMC,Yukon 1500 Hybrid 2WD,2011,8,6,Rear-Wheel Drive,Regular,2550,Regular Gasoline,Automatic (variable gear ratios),Sport Utility Vehicle - 2WD,-3250,14.1671,2024-11-12 23:34:21,39065.00
+31673,Mitsubishi,i-MiEV,2012,NULL,NULL,Rear-Wheel Drive,Electricity,700,Electricity,Automatic (A1),Subcompact Cars,6000,0.072,2024-11-12 23:34:21,47534.00
+32038,Infiniti,G37 Coupe,2012,6,3.7,Rear-Wheel Drive,Premium,3550,Premium Gasoline,Manual 6-spd,Subcompact Cars,-8250,15.6584,2024-11-12 23:34:21,65702.00
+32745,GMC,Terrain FWD,2013,4,2.4,Front-Wheel Drive,Regular,2050,Regular Gasoline,Automatic 6-spd,Small Sport Utility Vehicle 2WD,-750,11.4427,2024-11-12 23:34:21,75433.00
+32870,MINI,John Cooper Works Roadster,2013,4,1.6,Front-Wheel Drive,Premium,2300,Premium Gasoline,Automatic (S6),Two Seaters,-2000,10.259,2024-11-12 23:34:21,75125.00
+34060,Infiniti,Q50S Hybrid,2014,6,3.5,Rear-Wheel Drive,Premium,2250,Premium Gasoline,Automatic (S7),Compact Cars,-1750,9.917,2024-11-12 23:34:21,78650.00
+3419,Oldsmobile,Cutlass Supreme,1987,6,3.8,Rear-Wheel Drive,Regular,2850,Regular Gasoline,Automatic 3-spd,Midsize Cars,-4750,15.6584,2024-11-12 23:34:21,65304.00
+35014,Chevrolet,Malibu,2015,4,2.5,Front-Wheel Drive,Regular,1850,Regular Gasoline,Automatic (S6),Midsize Cars,250,10.259,2024-11-12 23:34:21,87323.00
+35104,Hyundai,Elantra,2015,4,1.8,Front-Wheel Drive,Regular,1800,Regular Gasoline,Manual 6-spd,Midsize Cars,500,9.917,2024-11-12 23:34:21,87453.00
+36621,Chevrolet,Suburban K1500 4WD,2016,8,5.3,4-Wheel Drive,Gasoline or E85,3000,Regular Gasoline,Automatic 6-spd,Standard Sport Utility Vehicle 4WD,-5500,16.5283,2024-11-12 23:34:21,60335.00
+2146,Ford,LTD,1986,4,2.3,Rear-Wheel Drive,Regular,2700,Regular Gasoline,Automatic 3-spd,Midsize Cars,-4000,14.8755,2024-11-12 23:34:21,79810.00
+46636,Toyota,GR Supra,2024,4,2,Rear-Wheel Drive,Premium,2500,Premium Gasoline,Automatic (S8),Two Seaters,-3000,11.0189,2024-11-12 23:34:21,81524.00
+46861,Chevrolet,Blazer FWD,2024,4,2,Front-Wheel Drive,Regular,2150,Regular Gasoline,Automatic 9-spd,Small Sport Utility Vehicle 2WD,-1250,11.9004,2024-11-12 23:34:21,48483.00
+4807,Mazda,B2200/B2600,1988,4,2.6,Rear-Wheel Drive,Regular,3000,Regular Gasoline,Automatic 4-spd,Small Pickup Trucks,-5500,16.5283,2024-11-12 23:34:21,59793.00
+690,Pontiac,Parisienne Wagon,1985,8,5.7,Rear-Wheel Drive,Diesel,2700,Diesel,Automatic 4-spd,Midsize-Large Station Wagons,-4000,17.0093,2024-11-12 23:34:21,73156.00
+7096,GMC,C2500 Sierra 2WD,1990,8,5,Rear-Wheel Drive,Regular,4150,Regular Gasoline,Automatic 3-spd,Standard Pickup Trucks,-11250,22.8854,2024-11-12 23:34:21,41991.00
+7361,Daihatsu,Rocky 4WD,1990,4,1.6,4-Wheel or All-Wheel Drive,Regular,2550,Regular Gasoline,Manual 5-spd,Special Purpose Vehicles,-3250,14.1671,2024-11-12 23:34:21,48971.00
+74,Chevrolet,Chevette,1985,4,1.6,Rear-Wheel Drive,Regular,2000,Regular Gasoline,Manual 4-spd,Subcompact Cars,-500,11.0189,2024-11-12 23:34:21,77237.00
+7630,Hyundai,Excel,1991,4,1.5,Front-Wheel Drive,Regular,2050,Regular Gasoline,Automatic 4-spd,Subcompact Cars,-750,11.4427,2024-11-12 23:34:21,40280.00
+865,Chevrolet,T10 (S10) Pickup 4WD,1985,6,2.8,4-Wheel or All-Wheel Drive,Regular,3000,Regular Gasoline,Automatic 4-spd,Standard Pickup Trucks,-5500,16.5283,2024-11-12 23:34:21,50973.00
+3754,Jeep,Comanche 2WD,1987,4,2.5,Rear-Wheel Drive,Regular,2550,Regular Gasoline,Manual 4-spd,Standard Pickup Trucks,-3250,14.1671,2024-11-12 23:34:21,82321.00
+37936,Cadillac,CT6,2017,4,2,Rear-Wheel Drive,Premium,2700,Premium Gasoline,Automatic (S8),Large Cars,-4000,11.9004,2024-11-12 23:34:21,71971.00
+38241,Volkswagen,Beetle,2017,4,2,Front-Wheel Drive,Regular,2050,Regular Gasoline,Automatic (AM-S6),Compact Cars,-750,11.4427,2024-11-12 23:34:21,87663.00
+38630,BMW,M6 Gran Coupe,2018,8,4.4,Rear-Wheel Drive,Premium,4200,Premium Gasoline,Automatic (AM-S7),Compact Cars,-11500,18.5944,2024-11-12 23:34:21,81335.00
+38685,Chevrolet,Equinox FWD,2018,4,2,Front-Wheel Drive,Premium,2700,Premium Gasoline,Automatic 9-spd,Small Sport Utility Vehicle 2WD,-4000,11.9004,2024-11-12 23:34:21,79581.00
+38726,Kia,Sorento AWD,2018,4,2,All-Wheel Drive,Regular,2450,Regular Gasoline,Automatic (S6),Small Sport Utility Vehicle 4WD,-2750,13.5232,2024-11-12 23:34:21,53221.00
+39222,Mercedes-Benz,C300 Convertible,2018,4,2,Rear-Wheel Drive,Premium,2700,Premium Gasoline,Automatic 9-spd,Subcompact Cars,-4000,11.9004,2024-11-12 23:34:21,61223.00
+4064,GMC,V15 Jimmy 4WD,1987,8,5.7,4-Wheel or All-Wheel Drive,Regular,4500,Regular Gasoline,Manual 4-spd,Special Purpose Vehicles,-13000,24.7925,2024-11-12 23:34:21,40065.00
+41114,Ford,F150 4WD BASE PAYLOAD LT TIRE,2019,6,3,Part-time 4-Wheel Drive,Diesel,2550,Diesel,Automatic (S10),Standard Pickup Trucks 4WD,-3250,16.2361,2024-11-12 23:34:21,84991.00
+42039,Mercedes-Benz,GLA250,2020,4,2,Front-Wheel Drive,Premium,2400,Premium Gasoline,Automatic (AM7),Small Sport Utility Vehicle 2WD,-2500,10.6254,2024-11-12 23:34:21,65627.00
+43177,Maserati,Ghibli Trofeo,2021,8,3.8,Rear-Wheel Drive,Premium,4200,Premium Gasoline,Automatic 8-spd,Midsize Cars,-11500,18.5944,2024-11-12 23:34:21,52085.00
+4408,Nissan,Sentra,1988,4,1.6,Front-Wheel Drive,Regular,1900,Regular Gasoline,Manual 5-spd,Compact Cars,0,10.6254,2024-11-12 23:34:21,80670.00
+44440,Toyota,4Runner 4WD,2022,6,4,Part-time 4-Wheel Drive,Regular,3150,Regular Gasoline,Automatic (S5),Standard Sport Utility Vehicle 4WD,-6250,17.5006,2024-11-12 23:34:21,89822.00
+45419,Hyundai,Sonata,2023,4,2.5,Front-Wheel Drive,Regular,1750,Regular Gasoline,Automatic (S8),Large Cars,750,9.5971,2024-11-12 23:34:21,61650.00
+2853,Mitsubishi,Montero,1986,4,2.6,4-Wheel or All-Wheel Drive,Regular,3150,Regular Gasoline,Manual 5-spd,Special Purpose Vehicles,-6250,17.5006,2024-11-12 23:34:21,46486.00
+31937,Saab,9-4X FWD,2012,6,3,Front-Wheel Drive,Regular,2700,Regular Gasoline,Automatic (S6),Sport Utility Vehicle - 2WD,-4000,14.8755,2024-11-12 23:34:21,46724.00
+34921,Lamborghini,Huracan,2015,10,5.2,All-Wheel Drive,Premium,4200,Premium Gasoline,Automatic (AM-S7),Two Seaters,-11500,18.5944,2024-11-12 23:34:21,37091.00
+36093,BMW,M5,2016,8,4.4,Rear-Wheel Drive,Premium,3950,Premium Gasoline,Manual 6-spd,Midsize Cars,-10250,17.5006,2024-11-12 23:34:21,82484.00
+369,Pontiac,Sunbird,1985,4,1.8,Front-Wheel Drive,Premium,3200,Premium Gasoline,Manual 4-spd,Compact Cars,-6500,14.1671,2024-11-12 23:34:21,67465.00
+37296,Audi,S8,2016,8,4,All-Wheel Drive,Premium,3750,Premium Gasoline,Automatic (S8),Midsize Cars,-9250,16.5283,2024-11-12 23:34:21,80939.00
+1933,Toyota,Tercel,1986,4,1.5,Front-Wheel Drive,Regular,1850,Regular Gasoline,Manual 5-spd,Subcompact Cars,250,10.259,2024-11-12 23:34:21,74949.00
+108,Dodge,Colt,1985,4,1.6,Front-Wheel Drive,Premium,2800,Premium Gasoline,Manual 5-spd,Subcompact Cars,-4500,12.3962,2024-11-12 23:34:21,87702.00
+46532,Buick,Encore GX FWD,2024,3,1.3,Front-Wheel Drive,Regular,1800,Regular Gasoline,Automatic (variable gear ratios),Small Sport Utility Vehicle 2WD,500,9.917,2024-11-12 23:34:21,44731.00
+46783,Alfa Romeo,Giulia,2024,6,2.9,Rear-Wheel Drive,Premium,3350,Premium Gasoline,Automatic 8-spd,Midsize Cars,-7250,14.8755,2024-11-12 23:34:21,52153.00
+47144,Audi,Q5 S line quattro,2024,4,2,All-Wheel Drive,Premium,2800,Premium Gasoline,Automatic (AM-S7),Small Sport Utility Vehicle 4WD,-4500,12.3962,2024-11-12 23:34:21,36190.00
+6599,Subaru,XT,1990,4,1.8,Front-Wheel Drive,Regular,2450,Regular Gasoline,Automatic 4-spd,Subcompact Cars,-2750,13.5232,2024-11-12 23:34:21,66619.00
+665,Plymouth,Reliant Wagon,1985,4,2.2,Front-Wheel Drive,Regular,2550,Regular Gasoline,Automatic 3-spd,Midsize-Large Station Wagons,-3250,14.1671,2024-11-12 23:34:21,46119.00
+7981,Mercedes-Benz,350SDL Turbo,1991,6,3.5,Rear-Wheel Drive,Diesel,2700,Diesel,Automatic 4-spd,Midsize Cars,-4000,17.0093,2024-11-12 23:34:21,65517.00
+8258,Chevrolet,K1500 Pickup 4WD,1991,8,5.7,4-Wheel or All-Wheel Drive,Regular,4150,Regular Gasoline,Manual 5-spd,Standard Pickup Trucks,-11250,22.8854,2024-11-12 23:34:21,37211.00
+8403,Ford,Aerostar Wagon,1991,6,3,Rear-Wheel Drive,Regular,3150,Regular Gasoline,Automatic 4-spd,Vans,-6250,17.5006,2024-11-12 23:34:21,68297.00
+30505,Chevrolet,Equinox FWD,2011,4,2.4,Front-Wheel Drive,Regular,2050,Regular Gasoline,Automatic 6-spd,Sport Utility Vehicle - 2WD,-750,11.4427,2024-11-12 23:34:21,59715.00
+30546,Mitsubishi,Endeavor AWD,2011,6,3.8,All-Wheel Drive,Premium,3950,Premium Gasoline,Automatic (S4),Sport Utility Vehicle - 4WD,-10250,17.5006,2024-11-12 23:34:21,83743.00
+30663,Lexus,GS 350,2011,6,3.5,Rear-Wheel Drive,Premium,3200,Premium Gasoline,Automatic (S6),Midsize Cars,-6500,14.1671,2024-11-12 23:34:21,45257.00
+30995,Dodge,Challenger,2011,8,5.7,Rear-Wheel Drive,Midgrade,3250,Midgrade Gasoline,Automatic 5-spd,Compact Cars,-6750,15.6584,2024-11-12 23:34:21,61644.00
+31603,Volvo,XC90 FWD,2012,6,3.2,Front-Wheel Drive,Regular,2850,Regular Gasoline,Automatic (S6),Sport Utility Vehicle - 2WD,-4750,15.6584,2024-11-12 23:34:21,73754.00
+3245,Mercury,Topaz,1987,4,2.3,Front-Wheel Drive,Regular,2550,Regular Gasoline,Automatic 3-spd,Compact Cars,-3250,14.1671,2024-11-12 23:34:21,61578.00
+33530,Kia,Optima Hybrid EX,2013,4,2.4,Front-Wheel Drive,Regular,1500,Regular Gasoline,Automatic (AM6),Midsize Cars,2000,8.26417,2024-11-12 23:34:21,63373.00
+34418,Dodge,Durango RWD,2014,6,3.6,Rear-Wheel Drive,Gasoline or E85,2700,Regular Gasoline,Automatic 8-spd,Standard Sport Utility Vehicle 2WD,-4000,14.8755,2024-11-12 23:34:21,62717.00
+34884,Nissan,Versa,2015,4,1.6,Front-Wheel Drive,Regular,1600,Regular Gasoline,Automatic (variable gear ratios),Compact Cars,1500,8.75029,2024-11-12 23:34:21,64101.00
+35418,Audi,Q3,2015,4,2,Front-Wheel Drive,Premium,2950,Premium Gasoline,Automatic (S6),Compact Cars,-5250,12.9352,2024-11-12 23:34:21,37176.00
+30516,GMC,Acadia FWD,2011,6,3.6,Front-Wheel Drive,Regular,2850,Regular Gasoline,Automatic 6-spd,Sport Utility Vehicle - 2WD,-4750,15.6584,2024-11-13 00:04:23,65614.00
+32818,Infiniti,FX37 RWD,2013,6,3.7,Rear-Wheel Drive,Premium,3550,Premium Gasoline,Automatic (S7),Small Sport Utility Vehicle 2WD,-8250,15.6584,2024-11-13 00:04:23,67253.00
+33727,Subaru,Outback AWD,2014,4,2.5,All-Wheel Drive,Regular,2250,Regular Gasoline,Manual 6-spd,Small Sport Utility Vehicle 4WD,-1750,12.3962,2024-11-13 00:04:23,46894.00
+35118,Volvo,XC60 AWD,2015,5,2.5,All-Wheel Drive,Regular,2550,Regular Gasoline,Automatic (S6),Small Sport Utility Vehicle 4WD,-3250,14.1671,2024-11-12 23:34:21,63113.00
+36267,Porsche,911 Carrera 4S Cabriolet,2016,6,3.8,4-Wheel Drive,Premium,3200,Premium Gasoline,Automatic (AM-S7),Minicompact Cars,-6500,14.1671,2024-11-12 23:34:21,69846.00
+2121,Chrysler,LeBaron GTS,1986,4,2.2,Front-Wheel Drive,Regular,2050,Regular Gasoline,Manual 5-spd,Midsize Cars,-750,11.4427,2024-11-12 23:34:21,60838.00
+2271,Renault,18i Sportwagon,1986,4,2.2,Front-Wheel Drive,Regular,2350,Regular Gasoline,Manual 5-spd,Small Station Wagons,-2250,12.9352,2024-11-12 23:34:21,70457.00
+37622,Honda,Accord,2017,6,3.5,Front-Wheel Drive,Regular,2150,Regular Gasoline,Automatic 6-spd,Midsize Cars,-1250,11.9004,2024-11-12 23:34:21,57313.00
+37682,GMC,Yukon C1500 XL 2WD,2017,8,6.2,Rear-Wheel Drive,Regular,3150,Regular Gasoline,Automatic 8-spd,Standard Sport Utility Vehicle 2WD,-6250,17.5006,2024-11-12 23:34:21,48072.00
+37942,Chevrolet,Sonic 5,2017,4,1.4,Front-Wheel Drive,Regular,1800,Regular Gasoline,Automatic (S6),Small Station Wagons,500,9.917,2024-11-12 23:34:21,46986.00
+380,Saab,900,1985,4,2,Front-Wheel Drive,Regular,3150,Regular Gasoline,Automatic 3-spd,Compact Cars,-6250,17.5006,2024-11-12 23:34:21,38197.00
+3848,Toyota,Truck 4WD,1987,4,2.4,4-Wheel or All-Wheel Drive,Regular,3000,Regular Gasoline,Manual 5-spd,Standard Pickup Trucks,-5500,16.5283,2024-11-12 23:34:21,76501.00
+39450,Ford,F150 Pickup 4WD FFV,2018,6,3.3,Part-time 4-Wheel Drive,Gasoline or E85,2700,Regular Gasoline,Automatic (S6),Standard Pickup Trucks 4WD,-4000,14.8755,2024-11-12 23:34:21,86259.00
+39569,Honda,Civic Si 4Dr,2018,4,1.5,Front-Wheel Drive,Premium,2100,Premium Gasoline,Manual 6-spd,Midsize Cars,-1000,9.29719,2024-11-12 23:34:21,72340.00
+40393,Ram,1500 Classic 2WD,2019,8,5.7,Rear-Wheel Drive,Midgrade,3650,Midgrade Gasoline,Automatic 8-spd,Standard Pickup Trucks 2WD,-8750,17.5006,2024-11-12 23:34:21,55324.00
+42952,Nissan,Titan 4WD,2021,8,5.6,Part-time 4-Wheel Drive,Premium,3750,Premium Gasoline,Automatic (S9),Standard Pickup Trucks 4WD,-9250,16.5283,2024-11-12 23:34:21,88281.00
+43278,Kia,Sorento AWD,2021,4,2.5,All-Wheel Drive,Regular,2250,Regular Gasoline,Automatic (S8),Small Sport Utility Vehicle 4WD,-1750,12.3962,2024-11-12 23:34:21,54402.00
+45326,BMW,iX M60 (21 inch wheels),2023,NULL,NULL,All-Wheel Drive,Electricity,1000,Electricity,Automatic (A1),Standard Sport Utility Vehicle 4WD,4500,0.1056,2024-11-12 23:34:21,82406.00
+47227,Subaru,Crosstrek Hybrid AWD,2023,4,2,All-Wheel Drive,Regular Gas and Electricity,1550,Regular Gasoline,Automatic (variable gear ratios),Small Sport Utility Vehicle 4WD,3250,4.92459,2024-11-12 23:34:21,53257.00
+47277,Jeep,Grand Cherokee 4xe,2024,4,2,4-Wheel Drive,Regular Gas and Electricity,2350,Regular Gasoline,Automatic 8-spd,Standard Sport Utility Vehicle 4WD,750,5.96097,2024-11-12 23:34:21,79418.00
+6098,Jeep,Comanche Pickup 4WD,1989,4,2.5,4-Wheel or All-Wheel Drive,Regular,2700,Regular Gasoline,Manual 4-spd,Standard Pickup Trucks,-4000,14.8755,2024-11-12 23:34:21,56512.00
+7973,Mercury,Sable,1991,6,3.8,Front-Wheel Drive,Regular,2850,Regular Gasoline,Automatic 4-spd,Midsize Cars,-4750,15.6584,2024-11-12 23:34:21,74786.00
+8579,Mazda,MX-5 Miata,1992,4,1.6,Rear-Wheel Drive,Regular,2350,Regular Gasoline,Automatic 4-spd,Two Seaters,-2250,12.9352,2024-11-12 23:34:21,87305.00
+9585,Isuzu,Rodeo 4WD,1992,6,3.1,4-Wheel or All-Wheel Drive,Regular,3850,Regular Gasoline,Automatic 4-spd,Special Purpose Vehicles,-9750,21.2507,2024-11-12 23:34:21,89107.00
+3825,GMC,V15 Pickup 4WD,1987,8,5,4-Wheel or All-Wheel Drive,Regular,3850,Regular Gasoline,Manual 4-spd,Standard Pickup Trucks,-9750,21.2507,2024-11-12 23:34:21,58825.00
+39735,Volkswagen,Tiguan Limited 4motion,2018,4,2,All-Wheel Drive,Premium,3050,Premium Gasoline,Automatic (S6),Small Sport Utility Vehicle 4WD,-5750,13.5232,2024-11-12 23:34:21,39104.00
+40103,Subaru,WRX,2019,4,2,All-Wheel Drive,Premium,2950,Premium Gasoline,Manual 6-spd,Compact Cars,-5250,12.9352,2024-11-12 23:34:21,43139.00
+4089,Subaru,Hatchback 4WD,1987,4,1.8,4-Wheel or All-Wheel Drive,Regular,2350,Regular Gasoline,Manual 4-spd,Special Purpose Vehicles,-2250,12.9352,2024-11-12 23:34:21,63824.00
+41135,Nissan,GT-R,2019,6,3.8,All-Wheel Drive,Premium,3750,Premium Gasoline,Automatic (AM6),Subcompact Cars,-9250,16.5283,2024-11-12 23:34:21,55202.00
+41994,Ford,Shelby GT350 Mustang,2020,8,5.2,Rear-Wheel Drive,Premium,4200,Premium Gasoline,Manual 6-spd,Subcompact Cars,-11500,18.5944,2024-11-12 23:34:21,54103.00
+43610,Ford,Mustang Mach 1,2021,8,5,Rear-Wheel Drive,Regular,3000,Regular Gasoline,Automatic (S10),Subcompact Cars,-5500,16.5283,2024-11-12 23:34:21,53623.00
+45700,Volkswagen,Atlas 4motion,2023,6,3.6,All-Wheel Drive,Regular,2700,Regular Gasoline,Automatic (S8),Small Sport Utility Vehicle 4WD,-4000,14.8755,2024-11-12 23:34:21,76722.00
+46357,Nissan,Versa,2023,4,1.6,Front-Wheel Drive,Regular,1800,Regular Gasoline,Manual 5-spd,Compact Cars,500,9.917,2024-11-12 23:34:21,53479.00
+30166,GMC,Sierra K15 4WD,2011,6,4.3,4-Wheel Drive,Regular,3350,Regular Gasoline,Automatic 4-spd,Standard Pickup Trucks 4WD,-7250,18.5944,2024-11-12 23:34:21,37505.00
+32695,Mercedes-Benz,CLS550,2013,8,4.7,Rear-Wheel Drive,Premium,3350,Premium Gasoline,Automatic 7-spd,Compact Cars,-7250,14.8755,2024-11-12 23:34:21,37229.00
+33405,Mazda,CX-5 4WD,2014,4,2,4-Wheel Drive,Regular,2000,Regular Gasoline,Automatic (S6),Small Sport Utility Vehicle 4WD,-500,11.0189,2024-11-12 23:34:21,66329.00
+33758,Volkswagen,Beetle Convertible,2013,4,2,Front-Wheel Drive,Diesel,1800,Diesel,Automatic (AM-S6),Subcompact Cars,500,11.5224,2024-11-12 23:34:21,52026.00
+34297,Dodge,Charger,2014,6,3.6,Rear-Wheel Drive,Regular,2350,Regular Gasoline,Automatic 8-spd,Large Cars,-2250,12.9352,2024-11-12 23:34:21,66742.00
+3520,Plymouth,Colt Vista,1987,4,2,Front-Wheel Drive,Regular,2350,Regular Gasoline,Manual 5-spd,Small Station Wagons,-2250,12.9352,2024-11-12 23:34:21,39685.00
+37262,Kia,Sportage FWD,2017,4,2.4,Front-Wheel Drive,Regular,2150,Regular Gasoline,Automatic (S6),Small Sport Utility Vehicle 2WD,-1250,11.9004,2024-11-12 23:34:21,46809.00
+47861,Rivian,R1T All-Terrain Dual Large (20in),2024,NULL,NULL,Part-time 4-Wheel Drive,Electricity,1100,Electricity,Automatic (A1),Standard Pickup Trucks 4WD,4000,0.1176,2024-11-12 23:34:21,59181.00
+4859,Dodge,D100/D150 Pickup 2WD,1988,8,5.9,Rear-Wheel Drive,Regular,4900,Regular Gasoline,Manual 4-spd,Standard Pickup Trucks,-15000,27.0464,2024-11-12 23:34:21,82735.00
+4962,Dodge,W250 Pickup 4WD,1988,8,5.9,4-Wheel or All-Wheel Drive,Regular,5950,Regular Gasoline,Automatic 3-spd,Standard Pickup Trucks,-20250,33.0567,2024-11-12 23:34:21,59340.00
+5147,Jeep,Cherokee 2WD,1988,4,2.5,Rear-Wheel Drive,Regular,3000,Regular Gasoline,Automatic 4-spd,Special Purpose Vehicle 2WD,-5500,16.5283,2024-11-12 23:34:21,59029.00
+5350,Nissan,Pulsar NX,1989,4,1.6,Front-Wheel Drive,Regular,2050,Regular Gasoline,Manual 5-spd,Subcompact Cars,-750,11.4427,2024-11-12 23:34:21,50156.00
+6148,Toyota,Truck 4WD,1989,4,2.4,4-Wheel or All-Wheel Drive,Regular,3000,Regular Gasoline,Manual 5-spd,Standard Pickup Trucks,-5500,16.5283,2024-11-12 23:34:21,51581.00
+694,Chevrolet,S10 Pickup 2WD,1985,4,2.5,Rear-Wheel Drive,Regular,2550,Regular Gasoline,Automatic 4-spd,Small Pickup Trucks,-3250,14.1671,2024-11-12 23:34:21,39432.00
+777,Chevrolet,C10 Pickup 2WD,1985,8,6.2,Rear-Wheel Drive,Diesel,2950,Diesel,Manual 4-spd,Standard Pickup Trucks,-5250,18.7997,2024-11-12 23:34:21,82793.00
+38780,Volvo,S60 Inscription FWD,2018,4,2,Front-Wheel Drive,Regular,1850,Regular Gasoline,Automatic (S8),Compact Cars,250,10.259,2024-11-12 23:34:21,77959.00
+39675,Hyundai,Tucson FWD,2018,4,2,Front-Wheel Drive,Regular,2050,Regular Gasoline,Automatic (S6),Small Sport Utility Vehicle 2WD,-750,11.4427,2024-11-12 23:34:21,57254.00
+40081,Ferrari,488 GTB,2019,8,3.9,Rear-Wheel Drive,Premium,3750,Premium Gasoline,Automatic (AM7),Two Seaters,-9250,16.5283,2024-11-12 23:34:21,37007.00
+40173,Porsche,911 Carrera,2019,6,3,Rear-Wheel Drive,Premium,2950,Premium Gasoline,Manual 7-spd,Minicompact Cars,-5250,12.9352,2024-11-12 23:34:21,46433.00
+40274,Volvo,XC40 FWD,2019,4,2,Front-Wheel Drive,Regular,2000,Regular Gasoline,Automatic (S8),Small Sport Utility Vehicle 2WD,-500,11.0189,2024-11-12 23:34:21,75866.00
+40294,Chevrolet,Tahoe C1500 2WD,2019,8,5.3,Rear-Wheel Drive,Gasoline or E85,3000,Regular Gasoline,Automatic 6-spd,Standard Sport Utility Vehicle 2WD,-5500,16.5283,2024-11-12 23:34:21,58621.00
+42062,Mercedes-Benz,AMG GT C Roadster,2020,8,4,Rear-Wheel Drive,Premium,3950,Premium Gasoline,Automatic (AM7),Two Seaters,-10250,17.5006,2024-11-12 23:34:21,35113.00
+30178,Chevrolet,Avalanche 1500 2WD,2011,8,5.3,Rear-Wheel Drive,Gasoline or E85,3150,Regular Gasoline,Automatic 6-spd,Sport Utility Vehicle - 2WD,-6250,17.5006,2024-11-13 00:04:23,68550.00
+31380,Chrysler,200,2012,6,3.6,Front-Wheel Drive,Gasoline or E85,2450,Regular Gasoline,Automatic 6-spd,Midsize Cars,-2750,13.5232,2024-11-13 00:04:23,77064.00
+32560,Audi,A5 quattro,2013,4,2,All-Wheel Drive,Premium,2600,Premium Gasoline,Manual 6-spd,Subcompact Cars,-3500,11.4427,2024-11-13 00:04:23,72062.00
+34288,Mazda,3 5-Door,2014,4,2.5,Front-Wheel Drive,Regular,1700,Regular Gasoline,Automatic (S6),Midsize Cars,1000,9.29719,2024-11-13 00:04:23,46994.00
+35154,Fiat,500,2015,4,1.4,Front-Wheel Drive,Premium,2300,Premium Gasoline,Automatic 6-spd,Minicompact Cars,-2000,10.259,2024-11-12 23:34:21,81246.00
+35779,Lexus,GS 450h,2015,6,3.5,Rear-Wheel Drive,Premium,2150,Premium Gasoline,Automatic (AV-S8),Midsize Cars,-1250,9.5971,2024-11-12 23:34:21,84165.00
+3721,Ford,F250 Pickup 2WD,1987,6,4.9,Rear-Wheel Drive,Regular,3600,Regular Gasoline,Manual 4-spd,Standard Pickup Trucks,-8500,19.834,2024-11-12 23:34:21,50524.00
+2726,GMC,G15/25 Rally 2WD,1986,8,5.7,Rear-Wheel Drive,Regular,4150,Regular Gasoline,Automatic 4-spd,Vans,-11250,22.8854,2024-11-12 23:34:21,89549.00
+1175,Mazda,RX-7,1985,2,1.1,Rear-Wheel Drive,Regular,3150,Regular Gasoline,Automatic 4-spd,Two Seaters,-6250,17.5006,2024-11-12 23:34:21,71229.00
+1375,Oldsmobile,Cutlass Supreme,1985,6,3.8,Rear-Wheel Drive,Regular,3000,Regular Gasoline,Automatic 3-spd,Midsize Cars,-5500,16.5283,2024-11-12 23:34:21,70031.00
+1631,GMC,C15 Suburban 2WD,1985,8,6.2,Rear-Wheel Drive,Diesel,3150,Diesel,Automatic 4-spd,Special Purpose Vehicle 2WD,-6250,19.8442,2024-11-12 23:34:21,84415.00
+1882,Plymouth,Colt,1986,4,1.6,Front-Wheel Drive,Premium,2800,Premium Gasoline,Manual 5-spd,Subcompact Cars,-4500,12.3962,2024-11-12 23:34:21,72043.00
+37647,GMC,Sierra C15 2WD,2017,6,4.3,Rear-Wheel Drive,Gasoline or E85,2700,Regular Gasoline,Automatic 6-spd,Standard Pickup Trucks 2WD,-4000,14.8755,2024-11-12 23:34:21,36688.00
+37974,Volkswagen,Jetta,2017,4,2,Front-Wheel Drive,Regular,2000,Regular Gasoline,Automatic (AM-S6),Compact Cars,-500,11.0189,2024-11-12 23:34:21,35044.00
+41298,Hyundai,Elantra,2020,4,2,Front-Wheel Drive,Regular,1600,Regular Gasoline,Automatic (variable gear ratios),Midsize Cars,1500,8.75029,2024-11-12 23:34:21,71809.00
+41463,Genesis,G80 RWD,2020,8,5,Rear-Wheel Drive,Premium,3550,Premium Gasoline,Automatic (S8),Large Cars,-8250,15.6584,2024-11-12 23:34:21,38154.00
+41468,Ford,Transit Connect Van 2WD,2020,4,2,Front-Wheel Drive,Regular,2150,Regular Gasoline,Automatic (S8),Special Purpose Vehicle 2WD,-1250,11.9004,2024-11-12 23:34:21,86936.00
+41912,Lexus,ES 350 F Sport,2020,6,3.5,Front-Wheel Drive,Regular,2150,Regular Gasoline,Automatic (S8),Midsize Cars,-1250,11.9004,2024-11-12 23:34:21,37578.00
+4194,Audi,80/90 quattro,1988,5,2.3,4-Wheel or All-Wheel Drive,Regular,3000,Regular Gasoline,Manual 5-spd,Subcompact Cars,-5500,16.5283,2024-11-12 23:34:21,40431.00
+42023,Rolls-Royce,Ghost EWB,2020,12,6.6,Rear-Wheel Drive,Premium,4800,Premium Gasoline,Automatic (S8),Large Cars,-14500,21.2507,2024-11-12 23:34:21,67178.00
+42307,Kia,Niro,2020,4,1.6,Front-Wheel Drive,Regular,1100,Regular Gasoline,Automatic (AM6),Small Station Wagons,4000,6.07163,2024-11-12 23:34:21,74705.00
+4358,Yugo,GV,1988,4,1.1,Front-Wheel Drive,Regular,2050,Regular Gasoline,Manual 4-spd,Subcompact Cars,-750,11.4427,2024-11-12 23:34:21,62056.00
+43711,Ford,Edge FWD,2021,4,2,Front-Wheel Drive,Regular,2250,Regular Gasoline,Automatic 8-spd,Small Sport Utility Vehicle 2WD,-1750,12.3962,2024-11-12 23:34:21,73568.00
+44783,Audi,RS e-tron GT,2022,NULL,NULL,All-Wheel Drive,Electricity,950,Electricity,Automatic (A2),Midsize Cars,4750,0.1008,2024-11-12 23:34:21,63930.00
+46245,Bentley,Flying Spur Hybrid,2023,6,2.9,All-Wheel Drive,Premium and Electricity,3550,Premium Gasoline,Automatic (AM-S8),Midsize Cars,-3750,8.39121,2024-11-12 23:34:21,79194.00
+46384,Ford,Edge AWD,2023,6,2.7,All-Wheel Drive,Regular,2550,Regular Gasoline,Automatic (S8),Small Sport Utility Vehicle 4WD,-3250,14.1671,2024-11-12 23:34:21,62199.00
+46846,GMC,Sierra 4WD,2024,8,5.3,4-Wheel Drive,Regular,3150,Regular Gasoline,Automatic 10-spd,Standard Pickup Trucks 4WD,-6250,17.5006,2024-11-12 23:34:21,89804.00
+47676,Bentley,Bentayga EWB,2024,8,4,All-Wheel Drive,Premium,4200,Premium Gasoline,Automatic (S8),Standard Sport Utility Vehicle 4WD,-11500,18.5944,2024-11-12 23:34:21,66339.00
+4888,GMC,C15 Pickup 2WD,1988,6,4.3,Rear-Wheel Drive,Regular,3350,Regular Gasoline,Manual 4-spd,Standard Pickup Trucks,-7250,18.5944,2024-11-12 23:34:21,86906.00
+6933,Subaru,Loyale Wagon,1990,4,1.8,Front-Wheel Drive,Regular,2700,Regular Gasoline,Automatic 3-spd,Small Station Wagons,-4000,14.8755,2024-11-12 23:34:21,69404.00
+38677,Lexus,LC 500h,2018,6,3.5,Rear-Wheel Drive,Premium,2250,Premium Gasoline,Automatic (AV-S10),Subcompact Cars,-1750,9.917,2024-11-12 23:34:21,81592.00
+3890,Ford,E150 Econoline 2WD,1987,8,5,Rear-Wheel Drive,Regular,3850,Regular Gasoline,Automatic 4-spd,Vans,-9750,21.2507,2024-11-12 23:34:21,41857.00
+39401,Lincoln,Continental  FWD,2018,6,3.7,Front-Wheel Drive,Regular,2700,Regular Gasoline,Automatic (S6),Large Cars,-4000,14.8755,2024-11-12 23:34:21,76213.00
+39457,Mercedes-Benz,Metris (Passenger Van),2018,4,2,Rear-Wheel Drive,Premium,3200,Premium Gasoline,Automatic 7-spd,Special Purpose Vehicle 2WD,-6500,14.1671,2024-11-12 23:34:21,77300.00
+40024,MINI,John Cooper Works Clubman All4,2019,4,2,All-Wheel Drive,Premium,2800,Premium Gasoline,Manual 6-spd,Midsize Cars,-4500,12.3962,2024-11-12 23:34:21,45617.00
+40730,Toyota,Tacoma 2WD,2019,6,3.5,Rear-Wheel Drive,Regular,2550,Regular Gasoline,Automatic (S6),Small Pickup Trucks 2WD,-3250,14.1671,2024-11-12 23:34:21,41587.00
+41269,Porsche,Panamera Turbo Executive,2019,8,4,All-Wheel Drive,Premium,3200,Premium Gasoline,Automatic (AM-S8),Large Cars,-6500,14.1671,2024-11-12 23:34:21,83411.00
+42831,Rolls-Royce,Wraith,2021,12,6.6,Rear-Wheel Drive,Premium,4800,Premium Gasoline,Automatic (S8),Midsize Cars,-14500,21.2507,2024-11-12 23:34:21,45644.00
+43059,Mercedes-Benz,AMG GLA35 4matic,2021,4,2,4-Wheel Drive,Premium,2700,Premium Gasoline,Automatic (AM8),Small Station Wagons,-4000,11.9004,2024-11-12 23:34:21,62280.00
+45210,Genesis,GV80 AWD,2023,6,3.5,All-Wheel Drive,Premium,3350,Premium Gasoline,Automatic (S8),Standard Sport Utility Vehicle 4WD,-7250,14.8755,2024-11-12 23:34:21,79441.00
+46186,Ford,Ranger 4WD,2023,4,2.3,Part-time 4-Wheel Drive,Regular,2550,Regular Gasoline,Automatic (S10),Standard Pickup Trucks 4WD,-3250,14.1671,2024-11-12 23:34:21,53643.00
+31342,Nissan,Altima Coupe,2012,4,2.5,Front-Wheel Drive,Regular,2050,Regular Gasoline,Automatic (AV-S6),Subcompact Cars,-750,11.4427,2024-11-12 23:34:21,79482.00
+31473,Chevrolet,Traverse FWD,2012,6,3.6,Front-Wheel Drive,Regular,2850,Regular Gasoline,Automatic 6-spd,Sport Utility Vehicle - 2WD,-4750,15.6584,2024-11-12 23:34:21,50614.00
+32433,Chevrolet,Express 1500 2WD Conversion Cargo,2013,8,5.3,Rear-Wheel Drive,Gasoline or E85,3850,Regular Gasoline,Automatic 4-spd,"Vans, Cargo Type",-9750,21.2507,2024-11-12 23:34:21,82002.00
+33717,Honda,Odyssey,2014,6,3.5,Front-Wheel Drive,Regular,2450,Regular Gasoline,Automatic 6-spd,Minivan - 2WD,-2750,13.5232,2024-11-12 23:34:21,49194.00
+35617,Volkswagen,Jetta,2015,4,2,Front-Wheel Drive,Regular,1900,Regular Gasoline,Manual 5-spd,Compact Cars,0,10.6254,2024-11-12 23:34:21,79270.00
+37313,Jaguar,F-Type Coupe,2017,6,3,Rear-Wheel Drive,Premium,2950,Premium Gasoline,Automatic (S8),Two Seaters,-5250,12.9352,2024-11-12 23:34:21,78186.00
+2538,Nissan,Truck 4WD,1986,4,2.4,4-Wheel or All-Wheel Drive,Regular,3000,Regular Gasoline,Manual 5-spd,Standard Pickup Trucks,-5500,16.5283,2024-11-12 23:34:21,50910.00
+46548,BMW,X6 xDrive40i,2024,6,3,All-Wheel Drive,Premium,2800,Premium Gasoline,Automatic (S8),Standard Sport Utility Vehicle 4WD,-4500,12.3962,2024-11-12 23:34:21,36924.00
+46708,Cadillac,XT5 AWD,2024,6,3.6,All-Wheel Drive,Regular,2550,Regular Gasoline,Automatic (S9),Small Sport Utility Vehicle 4WD,-3250,14.1671,2024-11-12 23:34:21,80349.00
+46826,Chevrolet,Silverado Mud Terrain Tires 4WD,2024,8,6.2,4-Wheel Drive,Premium,4500,Premium Gasoline,Automatic 10-spd,Standard Pickup Trucks 4WD,-13000,19.834,2024-11-12 23:34:21,85768.00
+47177,Audi,Q7 quattro,2024,4,2,All-Wheel Drive,Premium,3200,Premium Gasoline,Automatic (S8),Standard Sport Utility Vehicle 4WD,-6500,14.1671,2024-11-12 23:34:21,36421.00
+5273,Maserati,Spyder,1989,6,2.8,Rear-Wheel Drive,Premium,4500,Premium Gasoline,Automatic 4-spd,Two Seaters,-13000,19.834,2024-11-12 23:34:21,78318.00
+5634,Toyota,Camry,1989,4,2,Front-Wheel Drive,Regular,2150,Regular Gasoline,Automatic 4-spd,Compact Cars,-1250,11.9004,2024-11-12 23:34:21,81744.00
+5703,Dodge,Dynasty,1989,4,2.5,Front-Wheel Drive,Regular,2450,Regular Gasoline,Automatic 3-spd,Midsize Cars,-2750,13.5232,2024-11-12 23:34:21,65037.00
+7635,Isuzu,Impulse,1991,4,1.6,Front-Wheel Drive,Regular,2250,Regular Gasoline,Automatic 4-spd,Subcompact Cars,-1750,12.3962,2024-11-12 23:34:21,87982.00
+8409,Ford,E150 Club Wagon,1991,8,5.8,Rear-Wheel Drive,Regular,4900,Regular Gasoline,Automatic 4-spd,Vans,-15000,27.0464,2024-11-12 23:34:21,86004.00
+8681,Dodge,Stealth,1992,6,3,Front-Wheel Drive,Regular,3000,Regular Gasoline,Manual 5-spd,Subcompact Cars,-5500,16.5283,2024-11-12 23:34:21,43122.00
+37420,Infiniti,Q50 AWD,2016,6,3,All-Wheel Drive,Premium,3050,Premium Gasoline,Automatic (S7),Midsize Cars,-5750,13.5232,2024-11-12 23:34:21,78518.00
+37676,Cadillac,Escalade 2WD,2017,8,6.2,Rear-Wheel Drive,Regular,3150,Regular Gasoline,Automatic 8-spd,Standard Sport Utility Vehicle 2WD,-6250,17.5006,2024-11-12 23:34:21,86053.00
+39065,Kia,Forte 5,2018,4,1.6,Front-Wheel Drive,Regular,2150,Regular Gasoline,Manual 6-spd,Large Cars,-1250,11.9004,2024-11-12 23:34:21,79480.00
+39942,Buick,Envision FWD,2019,4,2.5,Front-Wheel Drive,Regular,2150,Regular Gasoline,Automatic 6-spd,Small Sport Utility Vehicle 2WD,-1250,11.9004,2024-11-12 23:34:21,40968.00
+40691,Chevrolet,Sonic,2019,4,1.4,Front-Wheel Drive,Regular,1850,Regular Gasoline,Automatic (S6),Compact Cars,250,10.259,2024-11-12 23:34:21,76070.00
+40858,Honda,CR-V AWD,2019,4,1.5,All-Wheel Drive,Regular,1850,Regular Gasoline,Automatic (variable gear ratios),Small Sport Utility Vehicle 4WD,250,10.259,2024-11-12 23:34:21,59166.00
+4086,Mitsubishi,Montero,1987,4,2.6,4-Wheel or All-Wheel Drive,Regular,3350,Regular Gasoline,Manual 5-spd,Special Purpose Vehicles,-7250,18.5944,2024-11-12 23:34:21,65182.00
+411,Volkswagen,Quantum,1985,5,2.2,Front-Wheel Drive,Regular,2850,Regular Gasoline,Manual 5-spd,Compact Cars,-4750,15.6584,2024-11-12 23:34:21,78934.00
+41469,Ford,Transit Connect Van FFV,2020,4,2,Front-Wheel Drive,Gasoline or E85,2150,Regular Gasoline,Automatic (S8),Special Purpose Vehicle 2WD,-1250,11.9004,2024-11-12 23:34:21,89749.00
+41736,MINI,Cooper Countryman,2020,3,1.5,Front-Wheel Drive,Premium,2300,Premium Gasoline,Automatic (AM-S7),Midsize Cars,-2000,10.259,2024-11-12 23:34:21,38268.00
+43169,Mercedes-Benz,GLE450 4matic,2021,6,3,4-Wheel Drive,Premium,2950,Premium Gasoline,Automatic 9-spd,Standard Sport Utility Vehicle 4WD,-5250,12.9352,2024-11-12 23:34:21,77790.00
+46047,Mercedes-Benz,E450 4matic Convertible,2023,6,3,All-Wheel Drive,Premium,2800,Premium Gasoline,Automatic 9-spd,Subcompact Cars,-4500,12.3962,2024-11-12 23:34:21,47041.00
+46175,Ford,F150 Pickup 4WD FFV,2023,8,5,Part-time 4-Wheel Drive,Gasoline or E85,2850,Regular Gasoline,Automatic (S10),Standard Pickup Trucks 4WD,-4750,15.6584,2024-11-12 23:34:21,78305.00
+31770,Volkswagen,Passat,2012,6,3.6,Front-Wheel Drive,Premium,2950,Premium Gasoline,Automatic (S6),Midsize Cars,-5250,12.9352,2024-11-12 23:34:21,36664.00
+32202,Toyota,Venza AWD,2012,4,2.7,All-Wheel Drive,Regular,2450,Regular Gasoline,Automatic (S6),Sport Utility Vehicle - 4WD,-2750,13.5232,2024-11-12 23:34:21,64485.00
+32972,Chrysler,200,2013,4,2.4,Front-Wheel Drive,Regular,2350,Regular Gasoline,Automatic 6-spd,Midsize Cars,-2250,12.9352,2024-11-12 23:34:21,58282.00
+3316,Subaru,Sedan/3 Door,1987,4,1.8,Front-Wheel Drive,Regular,2550,Regular Gasoline,Automatic 3-spd,Compact Cars,-3250,14.1671,2024-11-12 23:34:21,73829.00
+33585,Hyundai,Equus,2014,8,5,Rear-Wheel Drive,Premium,3750,Premium Gasoline,Automatic 8-spd,Large Cars,-9250,16.5283,2024-11-12 23:34:21,66867.00
+34411,Toyota,Tacoma 4WD,2014,6,4,Part-time 4-Wheel Drive,Regular,3150,Regular Gasoline,Manual 6-spd,Small Pickup Trucks 4WD,-6250,17.5006,2024-11-12 23:34:21,55179.00
+34456,Hyundai,Sonata,2014,4,2.4,Front-Wheel Drive,Regular,2000,Regular Gasoline,Automatic 6-spd,Large Cars,-500,11.0189,2024-11-12 23:34:21,80440.00
+2504,GMC,C25 Pickup 2WD,1986,8,6.2,Rear-Wheel Drive,Diesel,3300,Diesel,Manual 4-spd,Standard Pickup Trucks,-7000,21.0115,2024-11-12 23:34:21,65130.00
+1267,Toyota,Tercel,1985,4,1.5,Front-Wheel Drive,Regular,1850,Regular Gasoline,Manual 5-spd,Subcompact Cars,250,10.259,2024-11-12 23:34:21,56257.00
+46590,Alfa Romeo,Stelvio,2024,4,2,Rear-Wheel Drive,Premium,2700,Premium Gasoline,Automatic 8-spd,Small Sport Utility Vehicle 2WD,-4000,11.9004,2024-11-12 23:34:21,85084.00
+46740,Buick,Enclave FWD,2024,6,3.6,Front-Wheel Drive,Regular,2550,Regular Gasoline,Automatic 9-spd,Standard Sport Utility Vehicle 2WD,-3250,14.1671,2024-11-12 23:34:21,36124.00
+559,Oldsmobile,Delta 88 Royale,1985,8,5.7,Rear-Wheel Drive,Diesel,2700,Diesel,Automatic 3-spd,Large Cars,-4000,17.0093,2024-11-12 23:34:21,57089.00
+9425,Dodge,B150/B250 Van 2WD,1992,8,5.9,Rear-Wheel Drive,Regular,4900,Regular Gasoline,Automatic 4-spd,Vans,-15000,27.0464,2024-11-12 23:34:21,71979.00
+9587,Isuzu,Trooper,1992,6,3.2,4-Wheel or All-Wheel Drive,Regular,3600,Regular Gasoline,Automatic 4-spd,Special Purpose Vehicles,-8500,19.834,2024-11-12 23:34:21,41617.00
+9915,Dodge,Shadow,1993,6,3,Front-Wheel Drive,Regular,2700,Regular Gasoline,Manual 5-spd,Compact Cars,-4000,14.8755,2024-11-12 23:34:21,85752.00
+30779,Ford,Escape 4WD,2011,4,2.5,All-Wheel Drive,Regular,2450,Regular Gasoline,Automatic 6-spd,Sport Utility Vehicle - 4WD,-2750,13.5232,2024-11-12 23:34:21,42284.00
+31222,Infiniti,M56x,2012,8,5.6,All-Wheel Drive,Premium,3750,Premium Gasoline,Automatic (S7),Midsize Cars,-9250,16.5283,2024-11-12 23:34:21,88406.00
+31320,BMW,550i xDrive GT,2010,8,4.4,All-Wheel Drive,Premium,3750,Premium Gasoline,Automatic (S8),Large Cars,-9250,16.5283,2024-11-12 23:34:21,48753.00
+31625,MINI,Cooper Roadster,2012,4,1.6,Front-Wheel Drive,Premium,2250,Premium Gasoline,Automatic (S6),Two Seaters,-1750,9.917,2024-11-12 23:34:21,78524.00
+3262,Mitsubishi,Galant,1987,4,2.4,Front-Wheel Drive,Regular,2700,Regular Gasoline,Automatic 4-spd,Compact Cars,-4000,14.8755,2024-11-12 23:34:21,65961.00
+32666,Nissan,370Z,2013,6,3.7,Rear-Wheel Drive,Premium,3050,Premium Gasoline,Automatic (S7),Two Seaters,-5750,13.5232,2024-11-12 23:34:21,86998.00
+32671,Jaguar,XK Convertible,2013,8,5,Rear-Wheel Drive,Premium,3750,Premium Gasoline,Automatic (S6),Minicompact Cars,-9250,16.5283,2024-11-12 23:34:21,76402.00
+33314,Cadillac,ATS,2013,4,2,Rear-Wheel Drive,Regular,2250,Regular Gasoline,Automatic (S6),Compact Cars,-1750,12.3962,2024-11-12 23:34:21,47591.00
+36284,Kia,Forte,2016,4,1.8,Front-Wheel Drive,Regular,1850,Regular Gasoline,Manual 6-spd,Midsize Cars,250,10.259,2024-11-12 23:34:21,54799.00
+36900,Rolls-Royce,Wraith,2016,12,6.6,Rear-Wheel Drive,Premium,4500,Premium Gasoline,Automatic (S8),Midsize Cars,-13000,19.834,2024-11-12 23:34:21,46936.00
+37268,Nissan,Murano Hybrid FWD,2016,4,2.5,Front-Wheel Drive,Regular,1850,Regular Gasoline,Automatic (AV-S7),Midsize Station Wagons,250,10.259,2024-11-12 23:34:21,81816.00
+225,Subaru,Hatchback,1985,4,1.6,Front-Wheel Drive,Regular,1850,Regular Gasoline,Manual 4-spd,Subcompact Cars,250,10.259,2024-11-12 23:34:21,40396.00
+30049,Nissan,GT-R,2011,6,3.8,All-Wheel Drive,Premium,3950,Premium Gasoline,Automatic (AM6),Subcompact Cars,-10250,17.5006,2024-11-13 00:04:23,69513.00
+30077,Infiniti,M37x,2011,6,3.7,All-Wheel Drive,Premium,3350,Premium Gasoline,Automatic (S7),Midsize Cars,-7250,14.8755,2024-11-13 00:04:23,68537.00
+30309,Subaru,Impreza AWD,2011,4,2.5,All-Wheel Drive,Premium,3550,Premium Gasoline,Manual 6-spd,Compact Cars,-8250,15.6584,2024-11-13 00:04:23,64304.00
+30665,Lexus,GS 460,2011,8,4.6,Rear-Wheel Drive,Premium,3350,Premium Gasoline,Automatic (S8),Midsize Cars,-7250,14.8755,2024-11-13 00:04:23,81032.00
+3274,Peugeot,505 Sedan,1987,4,2.1,Rear-Wheel Drive,Premium,3750,Premium Gasoline,Automatic 4-spd,Compact Cars,-9250,16.5283,2024-11-13 00:04:23,40280.00
+33557,Honda,Accord Plug-in Hybrid,2014,4,2,Front-Wheel Drive,Regular Gas and Electricity,1150,Regular Gasoline,Automatic (variable gear ratios),Midsize Cars,4500,4.32881,2024-11-13 00:04:23,79375.00
+33844,Chevrolet,Malibu eAssist,2014,4,2.4,Front-Wheel Drive,Regular,1900,Regular Gasoline,Automatic (S6),Midsize Cars,0,10.6254,2024-11-13 00:04:23,74242.00
+34366,Ford,E250 Van FFV,2014,8,4.6,Rear-Wheel Drive,Gasoline or E85,3600,Regular Gasoline,Automatic 4-spd,"Vans, Cargo Type",-8500,19.834,2024-11-13 00:04:23,71816.00
+36804,Toyota,Corolla LE Eco,2016,4,1.8,Front-Wheel Drive,Regular,1650,Regular Gasoline,Automatic (variable gear ratios),Midsize Cars,1250,9.01545,2024-11-12 23:34:21,66669.00
+36852,Honda,Accord,2016,4,2.4,Front-Wheel Drive,Regular,1850,Regular Gasoline,Automatic (AV-S7),Midsize Cars,250,10.259,2024-11-12 23:34:21,68738.00
+2184,Pontiac,Bonneville,1986,8,5,Rear-Wheel Drive,Regular,3000,Regular Gasoline,Automatic 4-spd,Midsize Cars,-5500,16.5283,2024-11-12 23:34:21,67752.00
+2206,Buick,LeSabre,1986,6,3.8,Front-Wheel Drive,Regular,2700,Regular Gasoline,Automatic 4-spd,Large Cars,-4000,14.8755,2024-11-12 23:34:21,72821.00
+2376,Isuzu,Pickup 2WD,1986,4,1.9,Rear-Wheel Drive,Regular,2350,Regular Gasoline,Manual 4-spd,Small Pickup Trucks,-2250,12.9352,2024-11-12 23:34:21,39213.00
+2716,Ford,E150 Club Wagon,1986,8,5,Rear-Wheel Drive,Regular,3850,Regular Gasoline,Automatic 4-spd,Vans,-9750,21.2507,2024-11-12 23:34:21,79302.00
+37673,Land Rover,Discovery Sport,2017,4,2,4-Wheel Drive,Premium,3050,Premium Gasoline,Automatic (S9),Small Sport Utility Vehicle 4WD,-5750,13.5232,2024-11-12 23:34:21,57624.00
+37750,BMW,M4 Convertible,2017,6,3,Rear-Wheel Drive,Premium,3550,Premium Gasoline,Automatic (AM-S7),Subcompact Cars,-8250,15.6584,2024-11-12 23:34:21,40233.00
+37957,Mercedes-Benz,AMG GT S,2017,8,4,Rear-Wheel Drive,Premium,3750,Premium Gasoline,Automatic (AM7),Two Seaters,-9250,16.5283,2024-11-12 23:34:21,58578.00
+38657,Jaguar,F-Type S Coupe,2018,6,3,Rear-Wheel Drive,Premium,3750,Premium Gasoline,Manual 6-spd,Two Seaters,-9250,16.5283,2024-11-12 23:34:21,65804.00
+38663,Hyundai,Sonata,2018,4,2.4,Front-Wheel Drive,Regular,1900,Regular Gasoline,Automatic (S6),Large Cars,0,10.6254,2024-11-12 23:34:21,65906.00
+38902,Mercedes-Benz,E400 Coupe,2018,6,3,Rear-Wheel Drive,Premium,3050,Premium Gasoline,Automatic 9-spd,Subcompact Cars,-5750,13.5232,2024-11-12 23:34:21,36341.00
+39049,Dodge,Challenger GT,2018,6,3.6,All-Wheel Drive,Regular,2550,Regular Gasoline,Automatic 8-spd,Midsize Cars,-3250,14.1671,2024-11-12 23:34:21,50903.00
+40022,MINI,Cooper S Clubman All4,2019,4,2,All-Wheel Drive,Premium,2800,Premium Gasoline,Manual 6-spd,Midsize Cars,-4500,12.3962,2024-11-12 23:34:21,83426.00
+41728,BMW,M850i xDrive Gran Coupe,2020,8,4.4,All-Wheel Drive,Premium,3350,Premium Gasoline,Automatic (S8),Midsize Cars,-7250,14.8755,2024-11-12 23:34:21,36030.00
+43126,Mazda,CX-5 2WD,2021,4,2.5,Front-Wheel Drive,Regular,2150,Regular Gasoline,Automatic (S6),Small Sport Utility Vehicle 2WD,-1250,11.9004,2024-11-12 23:34:21,64402.00
+43662,BMW,i3s,2021,NULL,NULL,Rear-Wheel Drive,Electricity,650,Electricity,Automatic (A1),Subcompact Cars,6250,0.072,2024-11-12 23:34:21,69788.00
+44054,Jaguar,F-Type R AWD Convertible,2022,8,5,All-Wheel Drive,Premium,3750,Premium Gasoline,Automatic (S8),Two Seaters,-9250,16.5283,2024-11-12 23:34:21,67539.00
+4457,Mercedes-Benz,560SEC,1988,8,5.6,Rear-Wheel Drive,Premium,5200,Premium Gasoline,Automatic 4-spd,Compact Cars,-16500,22.8854,2024-11-12 23:34:21,88734.00
+44711,Ford,Edge AWD,2022,6,2.7,All-Wheel Drive,Regular,2550,Regular Gasoline,Automatic (S8),Small Sport Utility Vehicle 4WD,-3250,14.1671,2024-11-12 23:34:21,67722.00
+46502,MINI,JCW Countryman All4,2024,4,2,All-Wheel Drive,Premium,2600,Premium Gasoline,Automatic (S8),Midsize Cars,-3500,11.4427,2024-11-12 23:34:21,74669.00
+47031,Porsche,718 GT4 RS,2024,6,4,Rear-Wheel Drive,Premium,4200,Premium Gasoline,Automatic (AM-S7),Two Seaters,-11500,18.5944,2024-11-12 23:34:21,72399.00
+47055,Volkswagen,Jetta,2024,4,1.5,Front-Wheel Drive,Regular,1600,Regular Gasoline,Automatic (S8),Compact Cars,1500,8.75029,2024-11-12 23:34:21,65668.00
+513,Plymouth,Reliant,1985,4,2.2,Front-Wheel Drive,Regular,2450,Regular Gasoline,Automatic 3-spd,Midsize Cars,-2750,13.5232,2024-11-12 23:34:21,41463.00
+5620,Pontiac,Sunbird,1989,4,2,Front-Wheel Drive,Regular,2000,Regular Gasoline,Manual 5-spd,Compact Cars,-500,11.0189,2024-11-12 23:34:21,76942.00
+6916,Ford,Escort Wagon,1990,4,1.9,Front-Wheel Drive,Regular,2150,Regular Gasoline,Automatic 3-spd,Small Station Wagons,-1250,11.9004,2024-11-12 23:34:21,50684.00
+7243,Dodge,B350 Van 2WD,1990,8,5.2,Rear-Wheel Drive,Regular,4150,Regular Gasoline,Automatic 4-spd,Vans,-11250,22.8854,2024-11-12 23:34:21,67496.00
+7847,Oldsmobile,Cutlass Calais,1991,4,2.5,Front-Wheel Drive,Regular,2450,Regular Gasoline,Automatic 3-spd,Compact Cars,-2750,13.5232,2024-11-12 23:34:21,72723.00
+8884,Honda,Accord,1992,4,2.2,Front-Wheel Drive,Regular,2450,Regular Gasoline,Automatic 4-spd,Compact Cars,-2750,13.5232,2024-11-12 23:34:21,85146.00
+897,GMC,K15 Pickup 4WD,1985,6,4.3,4-Wheel or All-Wheel Drive,Regular,3600,Regular Gasoline,Manual 4-spd,Standard Pickup Trucks,-8500,19.834,2024-11-12 23:34:21,66651.00
+38784,Volvo,S60 AWD,2018,4,2,All-Wheel Drive,Regular,2050,Regular Gasoline,Automatic (S8),Compact Cars,-750,11.4427,2024-11-12 23:34:21,70977.00
+39478,BMW,X5 xDrive35i,2018,6,3,All-Wheel Drive,Premium,3350,Premium Gasoline,Automatic (S8),Standard Sport Utility Vehicle 4WD,-7250,14.8755,2024-11-12 23:34:21,40227.00
+39982,MINI,John Cooper Works Hardtop,2019,4,2,Front-Wheel Drive,Premium,2600,Premium Gasoline,Manual 6-spd,Subcompact Cars,-3500,11.4427,2024-11-12 23:34:21,35274.00
+4353,Toyota,Tercel,1988,4,1.5,Front-Wheel Drive,Regular,1850,Regular Gasoline,Manual 5-spd,Subcompact Cars,250,10.259,2024-11-12 23:34:21,63011.00
+440,Chevrolet,Celebrity,1985,6,2.8,Front-Wheel Drive,Regular,2700,Regular Gasoline,Automatic 4-spd,Midsize Cars,-4000,14.8755,2024-11-12 23:34:21,83512.00
+30412,Cadillac,Funeral Coach / Hearse,2011,8,4.6,Front-Wheel Drive,Regular,3850,Regular Gasoline,Automatic 4-spd,Large Cars,-9750,21.2507,2024-11-12 23:34:21,38260.00
+31589,Audi,A3,2012,4,2,Front-Wheel Drive,Premium,2800,Premium Gasoline,Automatic (S6),Small Station Wagons,-4500,12.3962,2024-11-12 23:34:21,65806.00
+32452,Hyundai,Tucson 2WD,2013,4,2,Front-Wheel Drive,Regular,2150,Regular Gasoline,Automatic 6-spd,Small Sport Utility Vehicle 2WD,-1250,11.9004,2024-11-12 23:34:21,37427.00
+32603,Kia,Optima,2013,4,2,Front-Wheel Drive,Regular,2050,Regular Gasoline,Automatic 6-spd,Midsize Cars,-750,11.4427,2024-11-12 23:34:21,70571.00
+33479,BMW,Z4 sDrive28i,2014,4,2,Rear-Wheel Drive,Premium,2600,Premium Gasoline,Automatic (S8),Two Seaters,-3500,11.4427,2024-11-12 23:34:21,44592.00
+33884,Infiniti,QX70 AWD,2014,6,3.7,All-Wheel Drive,Premium,3750,Premium Gasoline,Automatic (S7),Small Sport Utility Vehicle 4WD,-9250,16.5283,2024-11-12 23:34:21,50002.00
+33975,Subaru,Tribeca AWD,2014,6,3.6,All-Wheel Drive,Regular,3000,Regular Gasoline,Automatic (S5),Small Sport Utility Vehicle 4WD,-5500,16.5283,2024-11-12 23:34:21,46846.00
+34100,Maserati,Quattroporte GTS,2014,8,3.8,Rear-Wheel Drive,Premium,4200,Premium Gasoline,Automatic 8-spd,Large Cars,-11500,18.5944,2024-11-12 23:34:21,70634.00
+34475,Dodge,Dart GT,2014,4,2.4,Front-Wheel Drive,Regular,2150,Regular Gasoline,Automatic 6-spd,Midsize Cars,-1250,11.9004,2024-11-12 23:34:21,59393.00
+42428,Kia,Seltos FWD,2021,4,2,Front-Wheel Drive,Regular,1750,Regular Gasoline,Automatic (AV-S8),Small Sport Utility Vehicle 2WD,750,9.5971,2024-11-12 23:34:21,74766.00
+45160,Chevrolet,Silverado 2WD,2022,8,5.3,Rear-Wheel Drive,Regular,3000,Regular Gasoline,Automatic 10-spd,Standard Pickup Trucks 2WD,-5500,16.5283,2024-11-12 23:34:21,52820.00
+45335,Lamborghini,Huracan Spyder,2023,10,5.2,All-Wheel Drive,Premium,4500,Premium Gasoline,Automatic (AM-S7),Two Seaters,-13000,19.834,2024-11-12 23:34:21,40150.00

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honda</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: "Jost", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #2c2c2c;
+      color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    h1, h2 {
+      color: #e0e0e0;
+      text-align: center;
+    }
+    .image-container {
+      flex: 1;
+      background: #3b3b3b;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+    }
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      margin-bottom: 1rem;
+    }
+    .table-container {
+      flex: 2;
+      background: #3b3b3b;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .table-wrapper {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    table th, table td {
+      border: 1px solid #555;
+      padding: 10px;
+      text-align: left;
+    }
+    table th {
+      background-color: #555;
+      color: #fff;
+      font-weight: bold;
+    }
+    table tr:nth-child(even) {
+      background-color: #444;
+    }
+    table tr:hover {
+      background-color: #555;
+    }
+    .table-container::-webkit-scrollbar {
+      width: 8px;
+    }
+    .table-container::-webkit-scrollbar-thumb {
+      background-color: #777;
+      border-radius: 4px;
+    }
+    .model-display {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #3b3b3b;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      width: 80%;
+      max-width: 800px;
+      text-align: center;
+    }
+    .model-name {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .model-image img {
+      width: 270px; /* Sabit genişlik */
+      height: 180px; /* Sabit yükseklik */
+      object-fit: cover; /* Resmi kesmeden sığdırır */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .navigation-buttons {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      margin-top: 1rem;
+      gap: 1rem;
+    }
+
+    .navigation-buttons button {
+      background-color: #555;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+    }
+    .navigation-buttons button:hover {
+      background-color: #777;
+    }
+
+    .back-button-container {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+    }
+
+    .back-button-container button {
+      background-color: #555;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s;
+    }
+
+    .back-button-container button:hover {
+      background-color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="back-button-container">
+    <button onclick="goBack()">back</button>
+  </div>
+  
+  <div class="image-container">
+    <h1>Honda</h1>
+    <img src="img/honda.png" alt="Honda" />
+    <canvas id="hondaChart"></canvas>
+  </div>
+
+  <div class="table-container">
+    <h2>Honda Vehicle Data</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Year</th>
+            <th>Cylinders</th>
+            <th>Engine Displacement</th>
+            <th>Drive</th>
+            <th>Fuel Type</th>
+            <th>Fuel Cost</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Civic</td>
+            <td>2022</td>
+            <td>4</td>
+            <td>2.0</td>
+            <td>Front-Wheel Drive</td>
+            <td>Regular</td>
+            <td>1200</td>
+            <td>22000</td>
+          </tr>
+          <tr>
+            <td>Accord</td>
+            <td>2023</td>
+            <td>4</td>
+            <td>1.5</td>
+            <td>Front-Wheel Drive</td>
+            <td>Regular</td>
+            <td>1300</td>
+            <td>26000</td>
+          </tr>
+          <tr>
+            <td>CR-V</td>
+            <td>2022</td>
+            <td>4</td>
+            <td>1.5</td>
+            <td>All-Wheel Drive</td>
+            <td>Regular</td>
+            <td>1500</td>
+            <td>30000</td>
+          </tr>
+          <tr>
+            <td>Fit</td>
+            <td>2020</td>
+            <td>4</td>
+            <td>1.5</td>
+            <td>Front-Wheel Drive</td>
+            <td>Regular</td>
+            <td>1100</td>
+            <td>18000</td>
+          </tr>
+          <tr>
+            <td>Pilot</td>
+            <td>2023</td>
+            <td>6</td>
+            <td>3.5</td>
+            <td>All-Wheel Drive</td>
+            <td>Regular</td>
+            <td>1600</td>
+            <td>32000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h1>Honda Model Gallery</h1>
+    <div class="model-display">
+      <div class="model-name" id="model-name">Civic</div>
+      <div class="model-image">
+        <img id="model-image" src="model/h-m1.png" alt="Civic" />
+      </div>
+      <div class="navigation-buttons">
+        <button onclick="previousModel()">&#60;</button>
+        <button onclick="nextModel()">&#62;</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const models = [
+      { name: "Civic", image: "model/h-m1.png" },
+      { name: "Accord", image: "model/h-m2.png" },
+      { name: "CR-V", image: "model/h-m3.png" },
+      { name: "Fit", image: "model/h-m4.png" },
+      { name: "Pilot", image: "model/h-m5.png" }
+    ];
+
+    let currentIndex = 0;
+
+    function updateDisplay() {
+      const modelNameElement = document.getElementById("model-name");
+      const modelImageElement = document.getElementById("model-image");
+
+      modelNameElement.textContent = models[currentIndex].name;
+      modelImageElement.src = models[currentIndex].image;
+      modelImageElement.alt = models[currentIndex].name;
+    }
+
+    function nextModel() {
+      currentIndex = (currentIndex + 1) % models.length;
+      updateDisplay();
+    }
+
+    function previousModel() {
+      currentIndex = (currentIndex - 1 + models.length) % models.length;
+      updateDisplay();
+    }
+
+    updateDisplay();
+
+    const ctx = document.getElementById('hondaChart').getContext('2d');
+    const hondaChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ["Civic", "Accord", "CR-V", "Fit", "Pilot"],
+        datasets: [
+          {
+            label: 'Price (in USD)',
+            data: [22000, 2600026000, 30000, 18000, 32000],
+            backgroundColor: [
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)',
+              'rgba(255, 205, 86, 0.2)',
+              'rgba(54, 162, 235, 0.2)'
+            ],
+            borderColor: [
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)',
+              'rgba(255, 205, 86, 1)',
+              'rgba(54, 162, 235, 1)'
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+</html>
+

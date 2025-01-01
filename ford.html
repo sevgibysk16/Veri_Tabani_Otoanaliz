@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ford</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body {
+        font-family: "Jost", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #2c2c2c;
+        color: #e0e0e0;
+        display: grid;
+        grid-template-areas:
+          "header header"
+          "left-top right-top"
+          "left-bottom right-bottom";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto 1fr 1fr;
+        gap: 1rem;
+        padding: 1rem;
+      }
+      h1,
+      h2 {
+        color: #e0e0e0;
+        text-align: center;
+      }
+      .container {
+        position: relative;
+        text-align: center;
+      }
+      header {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 32px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      }
+      .image {
+        width: 100%;
+        max-width: 900px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .image-container {
+        grid-area: left-top;
+        background: #3b3b3b;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      .chart-container {
+        grid-area: left-bottom;
+        background: #3b3b3b;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+      .chart-container canvas {
+        max-width: 100%;
+        height: auto;
+      }
+      .table-container {
+        grid-area: right-top;
+        background: #3b3b3b;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+      .table-wrapper {
+        overflow-x: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+      table th,
+      table td {
+        border: 1px solid #555;
+        padding: 10px;
+        text-align: left;
+      }
+      table th {
+        background-color: #555;
+        color: #fff;
+        font-weight: bold;
+      }
+      table tr:nth-child(even) {
+        background-color: #444;
+      }
+      table tr:hover {
+        background-color: #555;
+      }
+      .model-gallery {
+        grid-area: right-bottom;
+        background: #3b3b3b;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+      .model-display {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 60px; /* Added this line */
+      }
+
+      .model-name {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        position: absolute;
+        top: -40px;
+      }
+      .model-image img {
+      width: 270px; /* Sabit genişlik */
+      height: 180px; /* Sabit yükseklik */
+      object-fit: cover; /* Resmi kesmeden sığdırır */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+      .navigation-buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .navigation-buttons button {
+        background-color: #555;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s;
+      }
+      .navigation-buttons button:hover {
+        background-color: #777;
+      }
+
+      .back-button-container {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1000;
+      }
+
+      .back-button-container button {
+        background-color: #555;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s;
+      }
+
+      .back-button-container button:hover {
+        background-color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="back-button-container">
+        <button onclick="goBack()">back</button>
+      </div>
+    <div class="header">
+      <h1>Ford</h1>
+    </div>
+    <div class="image-container">
+      <img src="img/ford.png" alt="Ford" />
+    </div>
+    <div class="chart-container">
+      <canvas id="vwChart"></canvas>
+    </div>
+    <div class="table-container">
+      <h2>Ford Vehicle Data</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Year</th>
+              <th>Cylinders</th>
+              <th>Engine Displacement</th>
+              <th>Drive</th>
+              <th>Fuel Type</th>
+              <th>Fuel Cost</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>F-150</td>
+              <td>2023</td>
+              <td>6.0</td>
+              <td>3.5</td>
+              <td>All-Wheel Drive</td>
+              <td>Premium</td>
+              <td>2500</td>
+              <td>45000.0</td>
+            </tr>
+            <tr>
+              <td>Mustang</td>
+              <td>2024</td>
+              <td>8.0</td>
+              <td>5.0</td>
+              <td>Rear-Wheel Drive</td>
+              <td>Premium</td>
+              <td>3200</td>
+              <td>55000.0</td>
+            </tr>
+            <tr>
+              <td>Explorer</td>
+              <td>2022</td>
+              <td>4.0</td>
+              <td>2.3</td>
+              <td>All-Wheel Drive</td>
+              <td>Regular</td>
+              <td>2000</td>
+              <td>42000.0</td>
+            </tr>
+            <tr>
+              <td>Focus</td>
+              <td>2021</td>
+              <td>4.0</td>
+              <td>2.0</td>
+              <td>Front-Wheel Drive</td>
+              <td>Regular</td>
+              <td>1800</td>
+              <td>22000.0</td>
+            </tr>
+            <tr>
+              <td>Maverick</td>
+              <td>2023</td>
+              <td>4.0</td>
+              <td>2.0</td>
+              <td>All-Wheel Drive</td>
+              <td>Hybrid</td>
+              <td>1200</td>
+              <td>25000.0</td>
+            </tr>
+            <tr>
+              <td>Escape</td>
+              <td>2020</td>
+              <td>4.0</td>
+              <td>1.5</td>
+              <td>All-Wheel Drive</td>
+              <td>Regular</td>
+              <td>1500</td>
+              <td>27000.0</td>
+            </tr>
+            <tr>
+              <td>Mach-E</td>
+              <td>2023</td>
+              <td>N/A</td>
+              <td>N/A</td>
+              <td>All-Wheel Drive</td>
+              <td>Electricity</td>
+              <td>900</td>
+              <td>62000.0</td>
+            </tr>
+            <tr>
+              <td>Bronco</td>
+              <td>2022</td>
+              <td>6.0</td>
+              <td>2.7</td>
+              <td>All-Wheel Drive</td>
+              <td>Premium</td>
+              <td>2800</td>
+              <td>48000.0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="model-gallery">
+      <h2>Ford Model Gallery</h2>
+      <div class="model-display">
+        <div class="navigation-buttons">
+          <button onclick="previousModel()">&#60;</button>
+          <button onclick="nextModel()">&#62;</button>
+        </div>
+        <div class="model-name" id="model-name">Golf</div>
+        <div class="model-image">
+          <img id="model-image" src="model/f-m1.png" alt="F-150" />
+        </div>
+      </div>
+    </div>
+    <script>
+      const models = [
+        { name: "F-150", image: "model/f-m1.png" },
+        { name: "Mustang", image: "model/f-m2.png" },
+        { name: "Explorer", image: "model/f-m3.png" },
+        { name: "Focus", image: "model/f-m4.png" },
+        { name: "Maverick", image: "model/f-m5.png" },
+        { name: "Escape", image: "model/f-m6.png" },
+        { name: "Mach-E", image: "model/f-m7.png" },
+        { name: "Bronco", image: "model/f-m8.png" },
+      ];
+
+      let currentIndex = 0;
+
+      function updateDisplay() {
+        const modelNameElement = document.getElementById("model-name");
+        const modelImageElement = document.getElementById("model-image");
+
+        modelNameElement.textContent = models[currentIndex].name;
+        modelImageElement.src = models[currentIndex].image;
+        modelImageElement.alt = models[currentIndex].name;
+      }
+
+      function previousModel() {
+        currentIndex = (currentIndex - 1 + models.length) % models.length;
+        updateDisplay();
+      }
+
+      function nextModel() {
+        currentIndex = (currentIndex + 1) % models.length;
+        updateDisplay();
+      }
+
+      window.onload = updateDisplay;
+
+      const ctx = document.getElementById("vwChart").getContext("2d");
+      const vwChart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: [
+            "F-150",
+            "Mustang",
+            "Explorer",
+            "Focus",
+            "Maverick",
+            "Escape",
+            "Mach-E",
+            "Bronco",
+          ],
+          datasets: [
+            {
+              label: "Price (USD)",
+              data: [45000, 55000, 42000, 22000, 25000, 27000, 62000, 48000],
+              backgroundColor: [
+                "rgba(255, 99, 132, 0.2)",
+                "rgba(54, 162, 235, 0.2)",
+                "rgba(255, 206, 86, 0.2)",
+                "rgba(75, 192, 192, 0.2)",
+                "rgba(153, 102, 255, 0.2)",
+                "rgba(255, 159, 64, 0.2)",
+              ],
+              borderColor: [
+                "rgba(255, 99, 132, 1)",
+                "rgba(54, 162, 235, 1)",
+                "rgba(255, 206, 86, 1)",
+                "rgba(75, 192, 192, 1)",
+                "rgba(153, 102, 255, 1)",
+                "rgba(255, 159, 64, 1)",
+              ],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+
+      function goBack() {
+    window.location.href = "index.html"; // Ana sayfa URL'sini buraya yazın
+  }
+    </script>
+  </body>
+</html>

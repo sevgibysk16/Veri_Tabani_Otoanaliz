@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMW</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+      body {
+        font-family: "Jost", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #2c2c2c;
+        color: #e0e0e0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+        padding: 2rem;
+      }
+      h1,
+      h2 {
+        color: #e0e0e0;
+        text-align: center;
+      }
+      .image-container {
+        flex: 1;
+        background: #3b3b3b;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;
+      }
+      .image-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        margin-bottom: 1rem;
+      }
+      .table-container {
+        flex: 2;
+        background: #3b3b3b;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .table-wrapper {
+        overflow-x: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+      table th,
+      table td {
+        border: 1px solid #555;
+        padding: 10px;
+        text-align: left;
+      }
+      table th {
+        background-color: #555;
+        color: #fff;
+        font-weight: bold;
+      }
+      table tr:nth-child(even) {
+        background-color: #444;
+      }
+      table tr:hover {
+        background-color: #555;
+      }
+      .table-container::-webkit-scrollbar {
+        width: 8px;
+      }
+      .table-container::-webkit-scrollbar-thumb {
+        background-color: #777;
+        border-radius: 4px;
+      }
+      .model-display {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #3b3b3b;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        width: 80%;
+        max-width: 800px;
+        text-align: center;
+      }
+      .model-name {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      .model-image img {
+      width: 270px; /* Sabit genişlik */
+      height: 180px; /* Sabit yükseklik */
+      object-fit: cover; /* Resmi kesmeden sığdırır */
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+      .navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 80%; /* Düğmelerin genişliğini ayarla */
+  margin-top: 1rem; /* Düğmeleri resim ve başlıktan ayır */
+  gap: 1rem; /* Düğmeler arasında boşluk */
+}
+
+      .navigation-buttons button {
+        background-color: #555;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s;
+      }
+      .navigation-buttons button:hover {
+        background-color: #777;
+      }
+
+      .back-button-container {
+         position: fixed;
+         top: 20px;
+         left: 20px;
+         z-index: 1000;
+      }
+
+      .back-button-container button {
+         background-color: #555;
+         color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s;
+  }
+
+  .back-button-container button:hover {
+    background-color: #777;
+  }
+    </style>
+  </head>
+  <body>
+
+    <div class="back-button-container">
+        <button onclick="goBack()">back</button>
+      </div>
+      
+    <div class="image-container">
+      <h1>BMW</h1>
+      <img src="img/bmw.png" alt="BMW" />
+      <canvas id="bmwChart"></canvas>
+    </div>
+    <div class="table-container">
+      <h2>BMW Vehicle Data</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Year</th>
+              <th>Cylinders</th>
+              <th>Engine Displacement</th>
+              <th>Drive</th>
+              <th>Fuel Type</th>
+              <th>Fuel Cost</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>320i</td>
+              <td>2017</td>
+              <td>4.0</td>
+              <td>2.0</td>
+              <td>Rear-Wheel Drive</td>
+              <td>Premium</td>
+              <td>2500</td>
+              <td>41937.0</td>
+            </tr>
+            <tr>
+              <td>M440i xDrive Convertible</td>
+              <td>2024</td>
+              <td>6.0</td>
+              <td>3.0</td>
+              <td>All-Wheel Drive</td>
+              <td>Premium</td>
+              <td>2700</td>
+              <td>80947.0</td>
+            </tr>
+            <tr>
+              <td>M6 Gran Coupe</td>
+              <td>2018</td>
+              <td>8.0</td>
+              <td>4.4</td>
+              <td>Rear-Wheel Drive</td>
+              <td>Premium</td>
+              <td>4200</td>
+              <td>81335.0</td>
+            </tr>
+            <tr>
+              <td>M5</td>
+              <td>2016</td>
+              <td>8.0</td>
+              <td>4.4</td>
+              <td>Rear-Wheel Drive</td>
+              <td>Premium</td>
+              <td>3950</td>
+              <td>82484.0</td>
+            </tr>
+            <tr>
+              <td>iX M60 (21 inch wheels)</td>
+              <td>2023</td>
+              <td>N/A</td>
+              <td>N/A</td>
+              <td>All-Wheel Drive</td>
+              <td>Electricity</td>
+              <td>1000</td>
+              <td>82406.0</td>
+            </tr>
+            <tr>
+              <td>X6 xDrive40i</td>
+              <td>2024</td>
+              <td>6.0</td>
+              <td>3.0</td>
+              <td>All-Wheel Drive</td>
+              <td>Premium</td>
+              <td>2800</td>
+              <td>36924.0</td>
+            </tr>
+            <tr>
+              <td>550i xDrive GT</td>
+              <td>2010</td>
+              <td>8.0</td>
+              <td>4.4</td>
+              <td>All-Wheel Drive</td>
+              <td>Premium</td>
+              <td>3750</td>
+              <td>48753.0</td>
+            </tr>
+            <tr>
+              <td>M4 Convertible</td>
+              <td>2017</td>
+              <td>6.0</td>
+              <td>3.0</td>
+              <td>Rear-Wheel Drive</td>
+              <td>Premium</td>
+              <td>3550</td>
+              <td>40233.0</td>
+            </tr>
+            <tr>
+              <td>M850i xDrive Gran Coupe</td>
+              <td>2020</td>
+              <td>8.0</td>
+              <td>4.4</td>
+              <td>All-Wheel Drive</td>
+              <td>Premium</td>
+              <td>3350</td>
+              <td>36030.0</td>
+            </tr>
+            <tr>
+              <td>i3s</td>
+              <td>2021</td>
+              <td>N/A</td>
+              <td>N/A</td>
+              <td>Rear-Wheel Drive</td>
+              <td>Electricity</td>
+              <td>650</td>
+              <td>69788.0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h1>BMW Model Gallery</h1>
+
+      <div class="model-display">
+        <div class="model-name" id="model-name">320i</div>
+        <div class="model-image">
+          <img id="model-image" src="model/b-m1.png" alt="320i" />
+        </div>
+        <div class="navigation-buttons">
+          <button onclick="previousModel()">&#60;</button>
+          <button onclick="nextModel()">&#62;</button>
+        </div>
+      </div>
+      
+
+    <script>
+      const models = [
+        { name: "320i", image: "model/b-m1.png" },
+        { name: "M440i xDrive Convertible", image: "model/b-m2.png" },
+        { name: "M6 Gran Coupe", image: "model/b-m3.png" },
+        { name: "M5", image: "model/b-m4.png" },
+        { name: "iX M60", image: "model/b-m5.png" },
+        { name: "X6 xDrive40i", image: "model/b-m6.png" },
+        { name: "550i xDrive GT", image: "model/b-m7.png" },
+        { name: "M4 Convertible", image: "model/b-m8.png" },
+        { name: "M850i xDrive", image: "model/b-m9.png" },
+        { name: "i3s", image: "model/b-m10.png" }
+      ];
+
+      let currentIndex = 0;
+
+      function updateDisplay() {
+        const modelNameElement = document.getElementById("model-name");
+        const modelImageElement = document.getElementById("model-image");
+
+        modelNameElement.textContent = models[currentIndex].name;
+        modelImageElement.src = models[currentIndex].image;
+        modelImageElement.alt = models[currentIndex].name;
+      }
+
+      function nextModel() {
+        currentIndex = (currentIndex + 1) % models.length;
+        updateDisplay();
+      }
+
+      function previousModel() {
+        currentIndex = (currentIndex - 1 + models.length) % models.length;
+        updateDisplay();
+      }
+
+      updateDisplay();
+
+      const ctx = document.getElementById("bmwChart").getContext("2d");
+      const bmwData = {
+        labels: [
+          "320i",
+          "M440i",
+          "M6",
+          "M5",
+          "iX M60",
+          "X6",
+          "550i",
+          "M4",
+          "M850i",
+          "i3s",
+        ],
+        datasets: [
+          {
+            label: "Price (USD)",
+            data: [
+              41937, 80947, 81335, 82484, 82406, 36924, 48753, 40233, 36030,
+              69788,
+            ],
+            backgroundColor: [
+              "rgba(255, 99, 132, 0.2)",
+              "rgba(54, 162, 235, 0.2)",
+              "rgba(255, 206, 86, 0.2)",
+              "rgba(75, 192, 192, 0.2)",
+              "rgba(153, 102, 255, 0.2)",
+              "rgba(255, 159, 64, 0.2)",
+            ],
+            borderColor: [
+              "rgba(255, 99, 132, 1)",
+              "rgba(54, 162, 235, 1)",
+              "rgba(255, 206, 86, 1)",
+              "rgba(75, 192, 192, 1)",
+              "rgba(153, 102, 255, 1)",
+              "rgba(255, 159, 64, 1)",
+            ],
+            borderWidth: 1,
+          },
+        ],
+      };
+
+      new Chart(ctx, {
+        type: "bar",
+        data: bmwData,
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              display: true,
+              labels: { color: "#ffffff" },
+            },
+            tooltip: {
+              backgroundColor: "#3b3b3b",
+              titleColor: "#ffffff",
+              bodyColor: "#ffffff",
+              borderColor: "#777",
+              borderWidth: 1,
+            },
+          },
+          scales: {
+            x: {
+              ticks: { color: "#ffffff" },
+              grid: { color: "rgba(255, 255, 255, 0.1)" },
+            },
+            y: {
+              ticks: { color: "#ffffff" },
+              grid: { color: "rgba(255, 255, 255, 0.1)" },
+            },
+          },
+        },
+      });
+
+      function goBack() {
+    window.location.href = "index.html"; // Ana sayfa URL'sini buraya yazın
+  }
+
+    </script>
+  </body>
+</html>

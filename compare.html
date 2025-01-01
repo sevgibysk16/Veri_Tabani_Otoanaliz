@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Comparison Module</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Hover açıklama kutusu */
+        .feature-cell {
+            position: relative;
+        }
+
+        .feature-tooltip {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            top: 100%;
+            left: 0;
+            z-index: 10;
+            width: 200px;
+            margin-top: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .feature-cell:hover .feature-tooltip {
+            display: block;
+        }
+
+        header {
+            background: #1f1f1f;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .dropdown select {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background: #333;
+            color: #fff;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #444;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background: #333;
+        }
+        .compare-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background: #444;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            
+        }
+        .compare-btn:hover {
+            transform: scale(1.1); /* Butonu büyütür */
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>Car Comparison Module</header>
+    <div class="container">
+        <div class="dropdown">
+            <label for="car1">Select Car 1:</label>
+            <select id="car1"></select>
+        </div>
+        <div class="dropdown">
+            <label for="car2">Select Car 2:</label>
+            <select id="car2"></select>
+        </div>
+        <button class="compare-btn" onclick="compareCars()">Compare</button>
+        <table id="comparison-table" style="display:none;">
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Car 1</th>
+                    <th>Car 2</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script>
+        const cars = [
+           
+            {"make": "Mercedes-Benz", "model": "E-Class", "year": 2023, "cylinders": 6, "engine_displacement": 3.0, "drive": "Rear-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 2200, "price": 52000},
+            {"make": "Mercedes-Benz", "model": "S-Class", "year": 2024, "cylinders": 8, "engine_displacement": 4.0, "drive": "All-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 3200, "price": 120000},
+            {"make": "Mercedes-Benz", "model": "GLE", "year": 2022, "cylinders": 4, "engine_displacement": 2.0, "drive": "All-Wheel Drive", "fuel_type": "Diesel", "fuel_cost": 1900, "price": 72000},
+            {"make": "Mercedes-Benz", "model": "C-Class", "year": 2023, "cylinders": 4, "engine_displacement": 2.0, "drive": "Rear-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 1800, "price": 45000},
+            {"make": "Mercedes-Benz", "model": "EQC", "year": 2023, "cylinders": "N/A", "engine_displacement": "N/A", "drive": "All-Wheel Drive", "fuel_type": "Electricity", "fuel_cost": 900, "price": 68000},
+            {"make": "Mercedes-Benz", "model": "GLA", "year": 2021, "cylinders": 4, "engine_displacement": 2.0, "drive": "All-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 1600, "price": 35000},
+            {"make": "Mercedes-Benz", "model": "AMG GT", "year": 2022, "cylinders": 8, "engine_displacement": 4.0, "drive": "Rear-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 4000, "price": 140000},
+            {"make": "Mercedes-Benz", "model": "EQB", "year": 2022, "cylinders": "N/A", "engine_displacement": "N/A", "drive": "All-Wheel Drive", "fuel_type": "Electricity", "fuel_cost": 700, "price": 60000},
+            {"make": "BMW", "model": "320i", "year": 2017, "cylinders": 4, "engine_displacement": 2.0, "drive": "Rear-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 2500, "price": 41937},
+            {"make": "BMW", "model": "M440i xDrive Convertible", "year": 2024, "cylinders": 6, "engine_displacement": 3.0, "drive": "All-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 2700, "price": 80947},
+            {"make": "BMW", "model": "M6 Gran Coupe", "year": 2018, "cylinders": 8, "engine_displacement": 4.4, "drive": "Rear-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 4200, "price": 81335},
+            {"make": "BMW", "model": "M5", "year": 2016, "cylinders": 8, "engine_displacement": 4.4, "drive": "Rear-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 3950, "price": 82484},
+            {"make": "BMW", "model": "iX M60 (21 inch wheels)", "year": 2023, "cylinders": "N/A", "engine_displacement": "N/A", "drive": "All-Wheel Drive", "fuel_type": "Electricity", "fuel_cost": 1000, "price": 82406},
+            {"make": "BMW", "model": "X6 xDrive40i", "year": 2024, "cylinders": 6, "engine_displacement": 3.0, "drive": "All-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 2800, "price": 36924},
+            {"make": "BMW", "model": "550i xDrive GT", "year": 2010, "cylinders": 8, "engine_displacement": 4.4, "drive": "All-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 3750, "price": 48753},
+            {"make": "BMW", "model": "M4 Convertible", "year": 2017, "cylinders": 6, "engine_displacement": 3.0, "drive": "Rear-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 3550, "price": 40233},
+            {"make": "BMW", "model": "M850i xDrive Gran Coupe", "year": 2020, "cylinders": 8, "engine_displacement": 4.4, "drive": "All-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 3350, "price": 36030},
+            {"make": "BMW", "model": "i3s", "year": 2021, "cylinders": "N/A", "engine_displacement": "N/A", "drive": "Rear-Wheel Drive", "fuel_type": "Electricity", "fuel_cost": 650, "price": 69788},
+            {"make": "Ford", "model": "F-150", "year": 2023, "cylinders": 6, "engine_displacement": 3.5, "drive": "All-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 2500, "price": 45000},
+            {"make": "Ford", "model": "Mustang", "year": 2024, "cylinders": 8, "engine_displacement": 5.0, "drive": "Rear-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 3200, "price": 55000},
+            {"make": "Ford", "model": "Explorer", "year": 2022, "cylinders": 4, "engine_displacement": 2.3, "drive": "All-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 2000, "price": 42000},
+            {"make": "Ford", "model": "Focus", "year": 2021, "cylinders": 4, "engine_displacement": 2.0, "drive": "Front-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 1800, "price": 22000},
+            {"make": "Ford", "model": "Maverick", "year": 2023, "cylinders": 4, "engine_displacement": 2.0, "drive": "All-Wheel Drive", "fuel_type": "Hybrid", "fuel_cost": 1200, "price": 25000},
+            {"make": "Ford", "model": "Escape", "year": 2020, "cylinders": 4, "engine_displacement": 1.5, "drive": "All-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 1500, "price": 27000},
+            {"make": "Ford", "model": "Mach-E", "year": 2023, "cylinders": "N/A", "engine_displacement": "N/A", "drive": "All-Wheel Drive", "fuel_type": "Electricity", "fuel_cost": 900, "price": 62000},
+            {"make": "Ford", "model": "Bronco", "year": 2022, "cylinders": 6, "engine_displacement": 2.7, "drive": "All-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 2800, "price": 48000},
+            {"make": "Porsche", "model": "911 Carrera", "year": 2021, "cylinders": 6, "engine_displacement": 3.0, "drive": "Rear-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 2200, "price": 101200},
+            {"make": "Porsche", "model": "Macan", "year": 2023, "cylinders": 4, "engine_displacement": 2.0, "drive": "All-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 1800, "price": 57900},
+            {"make": "Porsche", "model": "Taycan 4S", "year": 2022, "cylinders": "N/A", "engine_displacement": "N/A", "drive": "All-Wheel Drive", "fuel_type": "Electricity", "fuel_cost": 800, "price": 103800},
+            {"make": "Porsche", "model": "Cayenne S", "year": 2023, "cylinders": 6, "engine_displacement": 2.9, "drive": "All-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 2100, "price": 86900},
+            {"make": "Porsche", "model": "Panamera GTS", "year": 2020, "cylinders": 8, "engine_displacement": 4.0, "drive": "All-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 3100, "price": 129300},
+            {"make": "Toyota", "model": "Highlander AWD", "year": 2017, "cylinders": 6, "engine_displacement": 3.5, "drive": "All-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 2450, "price": 48586},
+            {"make": "Toyota", "model": "Celica Convertible", "year": 1988, "cylinders": 4, "engine_displacement": 2.0, "drive": "Front-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 2150, "price": 42522},
+            {"make": "Toyota", "model": "GR Supra", "year": 2024, "cylinders": 4, "engine_displacement": 2.0, "drive": "Rear-Wheel Drive", "fuel_type": "Premium", "fuel_cost": 2500, "price": 81524},
+            {"make": "Toyota", "model": "4Runner 4WD", "year": 2022, "cylinders": 6, "engine_displacement": 4.0, "drive": "Part-time 4-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 3150, "price": 89822},
+            {"make": "Toyota", "model": "Tercel", "year": 1986, "cylinders": 4, "engine_displacement": 1.5, "drive": "Front-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 1850, "price": 74949},
+            {"make": "Honda", "model": "Civic", "year": 2022, "cylinders": 4, "engine_displacement": 2.0, "drive": "Front-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 1200, "price": 22000},
+            {"make": "Honda", "model": "Accord", "year": 2023, "cylinders": 4, "engine_displacement": 1.5, "drive": "Front-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 1300, "price": 26000},
+            {"make": "Honda", "model": "CR-V", "year": 2022, "cylinders": 4, "engine_displacement": 1.5, "drive": "All-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 1500, "price": 30000},
+            {"make": "Honda", "model": "Fit", "year": 2020, "cylinders": 4, "engine_displacement": 1.5, "drive": "Front-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 1100, "price": 18000},
+            {"make": "Honda", "model": "Pilot", "year": 2023, "cylinders": 6, "engine_displacement": 3.5, "drive": "All-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 1600, "price": 32000},
+            {"make": "Nissan", "model": "Altima", "year": 2023, "cylinders": 4, "engine_displacement": 2.5, "drive": "Front-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 1300, "price": 25000},
+            {"make": "Nissan", "model": "Rogue", "year": 2022, "cylinders": 4, "engine_displacement": 2.5, "drive": "All-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 1400, "price": 27000},
+            {"make": "Nissan", "model": "Sentra", "year": 2021, "cylinders": 4, "engine_displacement": 2.0, "drive": "Front-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 1200, "price": 21000},
+            {"make": "Nissan", "model": "Pathfinder", "year": 2023, "cylinders": 6, "engine_displacement": 3.5, "drive": "All-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 1700, "price": 34000},
+            {"make": "Nissan", "model": "Murano", "year": 2022, "cylinders": 6, "engine_displacement": 3.5, "drive": "Front-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 1800, "price": 32000},
+            {"make": "Nissan", "model": "Kicks", "year": 2021, "cylinders": 4, "engine_displacement": 1.6, "drive": "Front-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 1000, "price": 19000},
+            {"make": "Nissan", "model": "Titan", "year": 2023, "cylinders": 8, "engine_displacement": 5.6, "drive": "All-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 2300, "price": 47000},
+            {"make": "Nissan", "model": "Versa", "year": 2020, "cylinders": 4, "engine_displacement": 1.6, "drive": "Front-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 900, "price": 17000},
+            {"make": "Volvo", "model": "XC90 FWD", "year": 2012, "cylinders": 6, "engine_displacement": 3.2, "drive": "Front-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 2850, "price": 73754},
+            {"make": "Volvo", "model": "XC60 AWD", "year": 2015, "cylinders": 5, "engine_displacement": 2.5, "drive": "All-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 2550, "price": 63113},
+            {"make": "Volvo", "model": "S60 Inscription FWD", "year": 2018, "cylinders": 4, "engine_displacement": 2.0, "drive": "Front-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 1850, "price": 77959},
+            {"make": "Volvo", "model": "XC40 FWD", "year": 2019, "cylinders": 4, "engine_displacement": 2.0, "drive": "Front-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 2000, "price": 75866},
+            {"make": "Volvo", "model": "S60 AWD", "year": 2018, "cylinders": 4, "engine_displacement": 2.0, "drive": "All-Wheel Drive", "fuel_type": "Regular", "fuel_cost": 2050, "price": 70977}
+
+           
+
+
+  
+        ];
+
+        function populateDropdowns() {
+    const dropdown1 = document.getElementById('car1');
+    const dropdown2 = document.getElementById('car2');
+
+    cars.forEach((car, index) => {
+        const option1 = document.createElement('option');
+        const option2 = document.createElement('option');
+
+        option1.value = index;
+        option1.textContent = car.make + ' ' + car.model;
+
+        option2.value = index;
+        option2.textContent = car.make + ' ' + car.model;
+
+
+        dropdown1.appendChild(option1);
+        dropdown2.appendChild(option2);
+    });
+}
+
+function compareCars() {
+    const car1Index = document.getElementById('car1').value;
+    const car2Index = document.getElementById('car2').value;
+
+    if (car1Index === '' || car2Index === '') {
+        alert('Lütfen karşılaştırmak için iki araba seçin.');
+        return;
+    }
+
+    const car1 = cars[car1Index];
+    const car2 = cars[car2Index];
+
+    const table = document.getElementById('comparison-table');
+    const tbody = table.querySelector('tbody');
+    tbody.innerHTML = '';
+
+    // Tablonun başlıklarını güncelliyoruz
+    const tableHeader = table.querySelector('thead');
+    const headerRow = tableHeader.querySelector('tr');
+    headerRow.innerHTML = '';  // Mevcut başlıkları temizliyoruz
+
+    // Yeni başlıklar ekliyoruz: Araba 1 ve Araba 2'nin markaları ve modelleri
+    const featureHeader = document.createElement('th');
+    featureHeader.textContent = 'Features';
+    headerRow.appendChild(featureHeader);
+
+        const car1Header = document.createElement('th');
+    car1Header.textContent = car1.make + ' ' + car1.model;
+    headerRow.appendChild(car1Header);
+
+    const car2Header = document.createElement('th');
+    car2Header.textContent = car2.make + ' ' + car2.model;
+    headerRow.appendChild(car2Header);
+
+    const features = Object.keys(car1);
+    features.forEach(feature => {
+        if (feature !== 'make' && feature !== 'model') {
+            const row = document.createElement('tr');
+
+            const featureCell = document.createElement('td');
+            featureCell.textContent = feature;
+            row.appendChild(featureCell);
+
+            const car1Cell = document.createElement('td');
+            car1Cell.textContent = car1[feature];
+            row.appendChild(car1Cell);
+
+            const car2Cell = document.createElement('td');
+            car2Cell.textContent = car2[feature];
+            row.appendChild(car2Cell);
+
+            tbody.appendChild(row);
+        }
+    });
+
+    table.style.display = 'table';
+}
+
+populateDropdowns();
+
+    </script>
+</body>
+</html>

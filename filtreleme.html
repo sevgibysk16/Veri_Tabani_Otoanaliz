@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Filter</title>
+    <style>
+       body { 
+        font-family: 'Arial', sans-serif; 
+        margin: 20px; 
+        background-color: #f4f4f9; 
+        color: #333; 
+    }
+
+    .filter-section, .results-section { 
+        margin-bottom: 20px; 
+        background: #ffffff; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        padding: 20px; 
+    }
+
+    .filter-section label { 
+        display: block; 
+        margin: 10px 0; 
+        font-weight: bold; 
+        color: #555; 
+    }
+
+    .filter-section input, .filter-section select, .filter-section button { 
+        width: 100%; 
+        padding: 10px; 
+        margin-top: 5px; 
+        border: 1px solid #ccc; 
+        border-radius: 8px; 
+        font-size: 14px; 
+        background-color: #f9f9f9; 
+        color: #333; 
+        transition: all 0.3s ease; 
+    }
+
+    .filter-section input:focus, .filter-section select:focus, .filter-section button:hover { 
+        border-color: #888; 
+        background-color: #fff; 
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    }
+
+    .filter-section button { 
+        background-color: #555; 
+        color: #fff; 
+        cursor: pointer; 
+        font-weight: bold; 
+    }
+
+    .results-section { 
+        border: 1px solid #e0e0e0; 
+        padding: 20px; 
+    }
+
+    table { 
+        width: 100%; 
+        border-collapse: collapse; 
+        margin-top: 10px; 
+    }
+
+    table, th, td { 
+        border: 1px solid #e0e0e0; 
+    }
+
+    th, td { 
+        padding: 10px; 
+        text-align: left; 
+        color: #555; 
+    }
+
+    th { 
+        background-color: #f5f5f5; 
+        font-weight: bold; 
+    }
+
+    tr:nth-child(even) { 
+        background-color: #fafafa; 
+    }
+
+    tr:hover { 
+        background-color: #f1f1f1; 
+        transition: background-color 0.3s ease; 
+    }
+    </style>
+</head>
+<body>
+    <h1>Car Filter</h1>
+    <div class="filter-section">
+        <h2>Filters</h2>
+        <label>
+            Make:
+            <select id="marka">
+                <option value="">All</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="bmw">BMW</option>
+                <option value="toyota">Toyota</option>
+                <option value="honda">Honda</option>
+                <option value="porsche">Porsche</option>
+                <option value="nissan">Nissan</option>
+                <option value="volkswagen">Volkswagen</option>
+                <option value="volvo">Volvo</option>
+                <option value="ford">Ford</option>
+            </select>
+        </label>
+        <label>
+            Yil:
+            <input type="number" id="yil" placeholder="e.g., 2023">
+        </label>
+        <label>
+            Fuel Type:
+            <select id="fuelType">
+                <option value="">All</option>
+                <option value="Regular">Regular</option>
+                <option value="Premium">Premium</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Electricity">Electricity</option>
+                <option value="Hybrid">Hybrid</option>
+            </select>
+        </label>
+        <label>
+            Drive:
+            <select id="drive">
+                <option value="">All</option>
+                <option value="Front-Wheel Drive">Front-Wheel Drive</option>
+                <option value="Rear-Wheel Drive">Rear-Wheel Drive</option>
+                <option value="All-Wheel Drive">All-Wheel Drive</option>
+                <option value="Part-time 4-Wheel Drive">Part-time 4-Wheel Drive</option>
+            </select>
+        </label>
+        <button onclick="applyFilters()">Apply Filters</button>
+    </div>
+    <div class="results-section">
+        <h2>Results</h2>
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>Marka</th>
+                    <th>Model</th>
+                    <th>Yil</th>
+                    <th>Fuel Type</th>
+                    <th>Drive</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Results will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        const carData = [
+    // Mercedes
+    { marka: "mercedes", model: "E-Class", yil: 2023, fuelType: "Premium", drive: "Arka Tekerlekten Çekiş", fiyat: 52000 },
+    { marka: "mercedes", model: "S-Class", yil: 2024, fuelType: "Premium", drive: "Dört Tekerlekten Çekiş", fiyat: 120000 },
+    { marka: "mercedes", model: "GLE", yil: 2022, fuelType: "Dizel", drive: "Dört Tekerlekten Çekiş", fiyat: 72000 },
+    { marka: "mercedes", model: "C-Class", yil: 2023, fuelType: "Premium", drive: "Arka Tekerlekten Çekiş", fiyat: 45000 },
+    { marka: "mercedes", model: "EQC", yil: 2023, fuelType: "Elektrik", drive: "Dört Tekerlekten Çekiş", fiyat: 68000 },
+    { marka: "mercedes", model: "GLA", yil: 2021, fuelType: "Premium", drive: "Dört Tekerlekten Çekiş", fiyat: 35000 },
+    { marka: "mercedes", model: "AMG GT", yil: 2022, fuelType: "Premium", drive: "Arka Tekerlekten Çekiş", fiyat: 140000 },
+    { marka: "mercedes", model: "EQB", yil: 2022, fuelType: "Elektrik", drive: "Dört Tekerlekten Çekiş", fiyat: 60000 },
+
+    // BMW
+    { marka: "bmw", model: "320i", yil: 2017, fuelType: "Premium", drive: "Arka Tekerlekten Çekiş", fiyat: 41937 },
+    { marka: "bmw", model: "M440i xDrive Convertible", yil: 2024, fuelType: "Premium", drive: "Dört Tekerlekten Çekiş", fiyat: 80947 },
+    { marka: "bmw", model: "M6 Gran Coupe", yil: 2018, fuelType: "Premium", drive: "Arka Tekerlekten Çekiş", fiyat: 81335 },
+    { marka: "bmw", model: "M5", yil: 2016, fuelType: "Premium", drive: "Arka Tekerlekten Çekiş", fiyat: 82484 },
+    { marka: "bmw", model: "iX M60 (21 inç jantlar)", yil: 2023, fuelType: "Elektrik", drive: "Dört Tekerlekten Çekiş", fiyat: 82406 },
+    { marka: "bmw", model: "X6 xDrive40i", yil: 2024, fuelType: "Premium", drive: "Dört Tekerlekten Çekiş", fiyat: 36924 },
+    { marka: "bmw", model: "550i xDrive GT", yil: 2010, fuelType: "Premium", drive: "Dört Tekerlekten Çekiş", fiyat: 48753 },
+    { marka: "bmw", model: "M4 Convertible", yil: 2017, fuelType: "Premium", drive: "Arka Tekerlekten Çekiş", fiyat: 40233 },
+    { marka: "bmw", model: "M850i ​​xDrive Gran Coupe", yil: 2020, fuelType: "Premium", drive: "Dört Tekerlekten Çekiş", fiyat: 36030 },
+    { marka: "bmw", model: "i3s", yil: 2021, fuelType: "Elektrik", drive: "Arka Tekerlekten Çekiş", fiyat: 69788 },
+
+    // Toyota
+    { marka: "toyota", model: "Highlander AWD", yil: 2017, fuelType: "Normal", drive: "Dört Tekerlekten Çekiş", fiyat: 48586 },
+    { marka: "toyota", model: "Celica Convertible", yil: 1988, fuelType: "Normal", drive: "Önden Çekiş", fiyat: 42522 },
+    { marka: "toyota", model: "GR Supra", yil: 2024, fuelType: "Premium", drive: "Arka Tekerlekten Çekiş", fiyat: 81524 },
+    { marka: "toyota", model: "4Runner 4WD", yil: 2022, fuelType: "Normal", drive: "Yarı zamanlı 4 Tekerlekten Çekiş", fiyat: 89822 },
+    { marka: "toyota", model: "Tercel", yil: 1986, fuelType: "Normal", drive: "Önden Çekiş", fiyat: 74949 },
+
+    // Honda
+    { marka: "honda", model: "Civic", yil: 2022, fuelType: "Normal", drive: "Önden Çekiş", fiyat: 22000 },
+    { marka: "honda", model: "Accord", yil: 2023, fuelType: "Normal", drive: "Önden Çekiş", fiyat: 26000 },
+    { marka: "honda", model: "CR-V", yil: 2022, fuelType: "Regular", drive: "All-Wheel Drive", fiyat: 30000 },
+    { marka: "honda", model: "Fit", yil: 2020, fuelType: "Regular", drive: "Önden Çekiş", fiyat: 18000 },
+    { marka: "honda", model: "Pilot", yil: 2023, fuelType: "Normal", drive: "Dört Tekerlekten Çekiş", fiyat: 32000 },
+
+    // Porsche
+    { marka: "porsche", model: "911 Carrera", yil: 2021, fuelType: "Premium", drive: "Arka Tekerlekten Çekiş", fiyat: 101200 },
+    { marka: "porsche", model: "Macan", yil: 2023, fuelType: "Premium", drive: "Dört Tekerlekten Çekiş", fiyat: 57900 },
+    { marka: "porsche", model: "Taycan 4S", yil: 2022, fuelType: "Elektrik", drive: "Dört Tekerlekten Çekiş", fiyat: 103800 },
+    { marka: "porsche", model: "Cayenne S", yil: 2023, fuelType: "Premium", drive: "Dört Tekerlekten Çekiş", fiyat: 86900 },
+    { marka: "porsche", model: "Panamera GTS", yil: 2020, fuelType: "Premium", drive: "Dört Tekerlekten Çekiş", fiyat: 129300 },
+
+    // Nissan
+    { marka: "nissan", model: "Altima", yil: 2023, fuelType: "Normal", drive: "Önden Çekiş", fiyat: 25000 },
+    { marka: "nissan", model: "Rogue", yil: 2022, fuelType: "Normal", drive: "Dört Tekerlekten Çekiş", fiyat: 27000 },
+    { marka: "nissan", model: "Leaf", yil: 2021, fuelType: "Electricity", drive: "Önden Çekiş", fiyat: 32000 },
+    { marka: "nissan", model: "Maxima", yil: 2020, fuelType: "Regular", drive: "Önden Çekiş", fiyat: 37000 },
+    { marka: "nissan", model: "Armada", yil: 2023, fuelType: "Regular", drive: "Dört Tekerlekten Çekiş", fiyat: 55000 },
+    { marka: "nissan", model: "Murano", yil: 2022, fuelType: "Normal", drive: "Önden Çekiş", fiyat: 32000 },
+    { marka: "nissan", model: "Sentra", yil: 2021, fuelType: "Normal", drive: "Önden Çekiş", fiyat: 21000 },
+    { marka: "nissan", model: "Pathfinder", yil: 2023, fuelType: "Normal", drive: "Dört Tekerlekten Çekiş", fiyat: 34000 },
+    { marka: "nissan", model: "Kicks", yil: 2021, fuelType: "Normal", drive: "Önden Çekiş", fiyat: 19000 },
+    { marka: "nissan", model: "Titan", yil: 2023, fuelType: "Normal", drive: "Dört Tekerlekten Çekiş", fiyat: 47000 },
+    { marka: "nissan", model: "Versa", yil: 2020, fuelType: "Normal", drive: "Önden Çekiş", fiyat: 17000 },
+
+    // Volkswagen
+    { marka: "volkswagen", model: "Golf", yil: 2023, cylinders: 4.0, engineDisplacement: 1.5, drive: "Front-Wheel Drive", fuelType: "Gasoline", fuelCost: 1500, fiyat: 25000 },
+    { marka: "volkswagen", model: "Passat", yil: 2022, cylinders: 4.0, engineDisplacement: 2.0, drive: "Front-Wheel Drive", fuelType: "Diesel", fuelCost: 1800, fiyat: 30000 },
+    { marka: "volkswagen", model: "Tiguan", yil: 2023, cylinders: 4.0, engineDisplacement: 2.0, drive: "All-Wheel Drive", fuelType: "Gasoline", fuelCost: 2000, fiyat: 35000 },
+    { marka: "volkswagen", model: "ID.4", yil: 2023, cylinders: "N/A", engineDisplacement: "N/A", drive: "All-Wheel Drive", fuelType: "Electricity", fuelCost: 800, fiyat: 40000 },
+    { marka: "volkswagen", model: "Jetta", yil: 2021, cylinders: 4.0, engineDisplacement: 1.4, drive: "Front-Wheel Drive", fuelType: "Gasoline", fuelCost: 1300, fiyat: 20000 },
+    { marka: "volkswagen", model: "Arteon", yil: 2022, cylinders: 4.0, engineDisplacement: 2.0, drive: "All-Wheel Drive", fuelType: "Gasoline", fuelCost: 2200, fiyat: 40000 },
+
+    // Volvo
+    { marka: "volvo", model: "XC90 FWD", yil: 2012, cylinders: 6, engineDisplacement: 3.2, drive: "Front-Wheel Drive", fuelType: "Regular", fuelCost: 2850, fiyat: 73754 },
+    { marka: "volvo", model: "XC60 AWD", yil: 2015, cylinders: 5, engineDisplacement: 2.5, drive: "All-Wheel Drive", fuelType: "Regular", fuelCost: 2550, fiyat: 63113 },
+    { marka: "volvo", model: "S60 Inscription FWD", yil: 2018, cylinders: 4, engineDisplacement: 2.0, drive: "Front-Wheel Drive", fuelType: "Regular", fuelCost: 1850, fiyat: 77959 },
+    { marka: "volvo", model: "XC40 FWD", yil: 2019, cylinders: 4, engineDisplacement: 2.0, drive: "Front-Wheel Drive", fuelType: "Regular", fuelCost: 2000, fiyat: 75866 },
+    { marka: "volvo", model: "S60 AWD", yil: 2018, cylinders: 4, engineDisplacement: 2.0, drive: "All-Wheel Drive", fuelType: "Regular", fuelCost: 2050, fiyat: 70977 },
+
+    // Ford
+    { marka: "ford", model: "F-150", yil: 2023, cylinders: 6.0, engineDisplacement: 3.5, drive: "All-Wheel Drive", fuelType: "Premium", fuelCost: 2500, fiyat: 45000 },
+    { marka: "ford", model: "Mustang", yil: 2024, cylinders: 8.0, engineDisplacement: 5.0, drive: "Rear-Wheel Drive", fuelType: "Premium", fuelCost: 3200, fiyat: 55000 },
+    { marka: "ford", model: "Explorer", yil: 2022, cylinders: 4.0, engineDisplacement: 2.3, drive: "All-Wheel Drive", fuelType: "Regular", fuelCost: 2000, fiyat: 42000 },
+    { marka: "ford", model: "Focus", yil: 2021, cylinders: 4.0, engineDisplacement: 2.0, drive: "Front-Wheel Drive", fuelType: "Regular", fuelCost: 1800, fiyat: 22000 },
+    { marka: "ford", model: "Maverick", yil: 2023, cylinders: 4.0, engineDisplacement: 2.0, drive: "All-Wheel Drive", fuelType: "Hybrid", fuelCost: 1200, fiyat: 25000 },
+    { marka: "ford", model: "Escape", yil: 2020, cylinders: 4.0, engineDisplacement: 1.5, drive: "All-Wheel Drive", fuelType: "Regular", fuelCost: 1500, fiyat: 27000 },
+    { marka: "ford", model: "Mach-E", yil: 2023, cylinders: "N/A", engineDisplacement: "N/A", drive: "All-Wheel Drive", fuelType: "Electricity", fuelCost: 900, fiyat: 62000 },
+    { marka: "ford", model: "Bronco", yil: 2022, cylinders: 6.0, engineDisplacement: 2.7, drive: "All-Wheel Drive", fuelType: "Premium", fuelCost: 2800, fiyat: 48000 }
+];
+
+function applyFilters() {
+            const marka = document.getElementById("marka").value;
+            const yil = document.getElementById("yil").value;
+            const fuelType = document.getElementById("fuelType").value;
+            const drive = document.getElementById("drive").value;
+
+            const filteredData = carData.filter(car => {
+                return (!marka || car.marka === marka) &&
+                    (!yil || car.yil == yil) &&
+                    (!fuelType || car.fuelType === fuelType) &&
+                    (!drive || car.drive === drive);
+            });
+
+            const resultsTable = document.getElementById("resultsTable").querySelector("tbody");
+            resultsTable.innerHTML = "";
+
+            filteredData.forEach(car => {
+                const row = resultsTable.insertRow();
+                row.insertCell().textContent = car.marka;
+                row.insertCell().textContent = car.model;
+                row.insertCell().textContent = car.yil;
+                row.insertCell().textContent = car.fuelType;
+                row.insertCell().textContent = car.drive;
+                row.insertCell().textContent = `$${car.fiyat.toLocaleString()}`;
+            });
+
+            if (filteredData.length === 0) {
+                const row = resultsTable.insertRow();
+                const cell = row.insertCell();
+                cell.colSpan = 6;
+                cell.textContent = "No results found.";
+                cell.style.textAlign = "center";
+            }
+        }
+    </script>
+</body>
+</html>
